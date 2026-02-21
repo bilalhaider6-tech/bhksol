@@ -34,46 +34,6 @@ const projects = [
     image: falakRiceImg,
     url: "https://estore.falakrice.com",
   },
-  {
-    id: 4,
-    title: "TechStart Inc.",
-    category: "SaaS Platform",
-    description: "A modern SaaS landing page with sleek design and high conversion rate.",
-    features: ["Custom animations", "Lead generation forms", "Responsive design"],
-    image: null,
-  },
-  {
-    id: 5,
-    title: "LocalBrew Coffee",
-    category: "Restaurant & Cafe",
-    description: "An inviting website for a local coffee shop with online ordering.",
-    features: ["Menu display", "Location map", "Contact form"],
-    image: null,
-  },
-  {
-    id: 6,
-    title: "StyleHub Fashion",
-    category: "E-commerce",
-    description: "A stylish online store with product catalog and shopping features.",
-    features: ["Product gallery", "Filter & search", "Mobile-first"],
-    image: null,
-  },
-  {
-    id: 7,
-    title: "FitLife Gym",
-    category: "Fitness & Health",
-    description: "Dynamic fitness website with class schedules and membership info.",
-    features: ["Class booking", "Trainer profiles", "Membership plans"],
-    image: null,
-  },
-  {
-    id: 8,
-    title: "HomeStyle Interiors",
-    category: "Interior Design",
-    description: "An elegant portfolio website showcasing interior design projects.",
-    features: ["Image gallery", "Project showcase", "Contact integration"],
-    image: null,
-  },
 ];
 
 const Portfolio = () => {
