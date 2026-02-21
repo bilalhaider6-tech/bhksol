@@ -4,6 +4,7 @@ import Layout from "@/components/layout/Layout";
 import { ExternalLink, ArrowRight } from "lucide-react";
 import safiaRiceImg from "@/assets/portfolio-safia-rice.png";
 import temlaRiceImg from "@/assets/portfolio-temla-rice.png";
+import falakRiceImg from "@/assets/portfolio-falak-rice.png";
 
 const projects = [
   {
@@ -26,6 +27,15 @@ const projects = [
   },
   {
     id: 3,
+    title: "Falak Rice E-Store",
+    category: "E-commerce Store",
+    description: "A full-featured e-commerce platform for one of Pakistan's leading rice and food brands, with product catalog, online ordering, and recipe hub.",
+    features: ["Online store", "Product catalog", "Recipe section"],
+    image: falakRiceImg,
+    url: "https://estore.falakrice.com",
+  },
+  {
+    id: 4,
     title: "TechStart Inc.",
     category: "SaaS Platform",
     description: "A modern SaaS landing page with sleek design and high conversion rate.",
@@ -33,7 +43,7 @@ const projects = [
     image: null,
   },
   {
-    id: 4,
+    id: 5,
     title: "LocalBrew Coffee",
     category: "Restaurant & Cafe",
     description: "An inviting website for a local coffee shop with online ordering.",
@@ -41,7 +51,7 @@ const projects = [
     image: null,
   },
   {
-    id: 5,
+    id: 6,
     title: "StyleHub Fashion",
     category: "E-commerce",
     description: "A stylish online store with product catalog and shopping features.",
@@ -49,7 +59,7 @@ const projects = [
     image: null,
   },
   {
-    id: 6,
+    id: 7,
     title: "FitLife Gym",
     category: "Fitness & Health",
     description: "Dynamic fitness website with class schedules and membership info.",
@@ -57,7 +67,7 @@ const projects = [
     image: null,
   },
   {
-    id: 7,
+    id: 8,
     title: "HomeStyle Interiors",
     category: "Interior Design",
     description: "An elegant portfolio website showcasing interior design projects.",
