@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import { ExternalLink, ArrowRight } from "lucide-react";
 import safiaRiceImg from "@/assets/portfolio-safia-rice.png";
+import temlaRiceImg from "@/assets/portfolio-temla-rice.png";
 
 const projects = [
   {
@@ -16,6 +17,15 @@ const projects = [
   },
   {
     id: 2,
+    title: "Temla Rice",
+    category: "Rice Brand & E-commerce",
+    description: "A vibrant, modern website for Pakistan's longest rice grain brand featuring product catalog, recipes, and e-commerce functionality.",
+    features: ["E-commerce store", "Recipe section", "Export info"],
+    image: temlaRiceImg,
+    url: "https://temlarice.com",
+  },
+  {
+    id: 3,
     title: "TechStart Inc.",
     category: "SaaS Platform",
     description: "A modern SaaS landing page with sleek design and high conversion rate.",
@@ -23,7 +33,7 @@ const projects = [
     image: null,
   },
   {
-    id: 3,
+    id: 4,
     title: "LocalBrew Coffee",
     category: "Restaurant & Cafe",
     description: "An inviting website for a local coffee shop with online ordering.",
@@ -31,7 +41,7 @@ const projects = [
     image: null,
   },
   {
-    id: 4,
+    id: 5,
     title: "StyleHub Fashion",
     category: "E-commerce",
     description: "A stylish online store with product catalog and shopping features.",
@@ -39,7 +49,7 @@ const projects = [
     image: null,
   },
   {
-    id: 5,
+    id: 6,
     title: "FitLife Gym",
     category: "Fitness & Health",
     description: "Dynamic fitness website with class schedules and membership info.",
@@ -47,7 +57,7 @@ const projects = [
     image: null,
   },
   {
-    id: 6,
+    id: 7,
     title: "HomeStyle Interiors",
     category: "Interior Design",
     description: "An elegant portfolio website showcasing interior design projects.",
