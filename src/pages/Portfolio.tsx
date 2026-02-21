@@ -2,47 +2,49 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import { ExternalLink, ArrowRight } from "lucide-react";
+import safiaRiceImg from "@/assets/portfolio-safia-rice.png";
 
 const projects = [
   {
     id: 1,
+    title: "Safia Rice Mills",
+    category: "Rice Export Business",
+    description: "A professional website for a premium Pakistani rice exporter, showcasing their products, processes, and 28+ years of excellence in quality rice processing.",
+    features: ["Product showcase", "Company profile", "Responsive design"],
+    image: safiaRiceImg,
+    url: "https://safiaricemills.com",
+  },
+  {
+    id: 2,
     title: "TechStart Inc.",
     category: "SaaS Platform",
     description: "A modern SaaS landing page with sleek design and high conversion rate.",
     features: ["Custom animations", "Lead generation forms", "Responsive design"],
-    color: "from-blue-500/20 to-blue-600/10",
+    image: null,
   },
   {
-    id: 2,
+    id: 3,
     title: "LocalBrew Coffee",
     category: "Restaurant & Cafe",
     description: "An inviting website for a local coffee shop with online ordering.",
     features: ["Menu display", "Location map", "Contact form"],
-    color: "from-amber-500/20 to-amber-600/10",
+    image: null,
   },
   {
-    id: 3,
+    id: 4,
     title: "StyleHub Fashion",
     category: "E-commerce",
     description: "A stylish online store with product catalog and shopping features.",
     features: ["Product gallery", "Filter & search", "Mobile-first"],
-    color: "from-pink-500/20 to-pink-600/10",
+    image: null,
   },
   {
-    id: 4,
+    id: 5,
     title: "FitLife Gym",
     category: "Fitness & Health",
     description: "Dynamic fitness website with class schedules and membership info.",
     features: ["Class booking", "Trainer profiles", "Membership plans"],
-    color: "from-green-500/20 to-green-600/10",
-  },
-  {
-    id: 5,
-    title: "LegalPro Associates",
-    category: "Professional Services",
-    description: "A professional law firm website building trust and credibility.",
-    features: ["Service pages", "Team bios", "Client testimonials"],
-    color: "from-slate-500/20 to-slate-600/10",
+    image: null,
   },
   {
     id: 6,
@@ -50,7 +52,7 @@ const projects = [
     category: "Interior Design",
     description: "An elegant portfolio website showcasing interior design projects.",
     features: ["Image gallery", "Project showcase", "Contact integration"],
-    color: "from-purple-500/20 to-purple-600/10",
+    image: null,
   },
 ];
 
@@ -81,20 +83,27 @@ const Portfolio = () => {
                 className="group bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-xl transition-all duration-300 border border-border/50 opacity-0 animate-fade-in-up"
                 style={{ animationDelay: `${index * 100}ms`, animationFillMode: 'forwards' }}
               >
-                {/* Project Image Placeholder */}
-                <div className={`aspect-video bg-gradient-to-br ${project.color} relative overflow-hidden`}>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center p-6">
-                      <div className="w-16 h-16 rounded-xl bg-background/80 backdrop-blur-sm flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
-                        <ExternalLink size={24} className="text-primary" />
+                {/* Project Image */}
+                <div className="aspect-video bg-gradient-to-br from-primary/10 to-primary/5 relative overflow-hidden">
+                  {project.image ? (
+                    <img src={project.image} alt={project.title} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="text-center p-6">
+                        <div className="w-16 h-16 rounded-xl bg-background/80 backdrop-blur-sm flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                          <ExternalLink size={24} className="text-primary" />
+                        </div>
+                        <span className="text-xs text-foreground/70 bg-background/60 backdrop-blur-sm px-3 py-1 rounded-full">
+                          Coming Soon
+                        </span>
                       </div>
-                      <span className="text-xs text-foreground/70 bg-background/60 backdrop-blur-sm px-3 py-1 rounded-full">
-                        View Project
-                      </span>
                     </div>
-                  </div>
-                  {/* Hover overlay */}
-                  <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors" />
+                  )}
+                  {project.url && (
+                    <a href={project.url} target="_blank" rel="noopener noreferrer" className="absolute top-3 right-3 w-8 h-8 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:bg-background">
+                      <ExternalLink size={14} className="text-primary" />
+                    </a>
+                  )}
                 </div>
 
                 {/* Project Info */}
