@@ -12,7 +12,7 @@ const projects = [
     description: "A professional website for a premium Pakistani rice exporter, showcasing their products, processes, and 28+ years of excellence in quality rice processing.",
     features: ["Product showcase", "Company profile", "Responsive design"],
     image: safiaRiceImg,
-    url: "https://safiaricemills.com",
+    url: "https://safiaricemills.lovable.app",
   },
   {
     id: 2,
