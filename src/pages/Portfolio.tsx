@@ -1,55 +1,48 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
-import { ExternalLink, ArrowRight } from "lucide-react";
+import AnimatedSection from "@/components/AnimatedSection";
+import { ExternalLink, ArrowRight, Eye } from "lucide-react";
 import safiaRiceImg from "@/assets/portfolio-safia-rice.png";
 import temlaRiceImg from "@/assets/portfolio-temla-rice.png";
 import falakRiceImg from "@/assets/portfolio-falak-rice.png";
 
 const projects = [
   {
-    id: 1,
-    title: "Safia Rice Mills",
-    category: "Rice Export Business",
-    description: "A professional website for a premium Pakistani rice exporter, showcasing their products, processes, and 28+ years of excellence in quality rice processing.",
+    id: 1, title: "Safia Rice Mills", category: "Rice Export Business",
+    description: "A professional website for a premium Pakistani rice exporter, showcasing their products, processes, and 28+ years of excellence.",
     features: ["Product showcase", "Company profile", "Responsive design"],
-    image: safiaRiceImg,
-    url: "https://safiaricemills.lovable.app",
+    image: safiaRiceImg, url: "https://safiaricemills.lovable.app",
   },
   {
-    id: 2,
-    title: "Temla Rice",
-    category: "Rice Brand & E-commerce",
-    description: "A vibrant, modern website for Pakistan's longest rice grain brand featuring product catalog, recipes, and e-commerce functionality.",
+    id: 2, title: "Temla Rice", category: "Rice Brand & E-commerce",
+    description: "A vibrant, modern website for Pakistan's longest rice grain brand featuring product catalog, recipes, and e-commerce.",
     features: ["E-commerce store", "Recipe section", "Export info"],
-    image: temlaRiceImg,
-    url: "https://temlarice.com",
+    image: temlaRiceImg, url: "https://temlarice.com",
   },
   {
-    id: 3,
-    title: "Falak Rice E-Store",
-    category: "E-commerce Store",
-    description: "A full-featured e-commerce platform for one of Pakistan's leading rice and food brands, with product catalog, online ordering, and recipe hub.",
+    id: 3, title: "Falak Rice E-Store", category: "E-commerce Store",
+    description: "A full-featured e-commerce platform for one of Pakistan's leading rice and food brands, with product catalog and recipe hub.",
     features: ["Online store", "Product catalog", "Recipe section"],
-    image: falakRiceImg,
-    url: "https://estore.falakrice.com",
+    image: falakRiceImg, url: "https://estore.falakrice.com",
   },
 ];
 
 const Portfolio = () => {
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-b from-primary/5 to-background">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 animate-fade-in-up">
-              Our <span className="text-primary">Portfolio</span>
+      {/* Hero */}
+      <section className="relative pt-32 pb-20 overflow-hidden" style={{ background: "var(--gradient-hero)" }}>
+        <div className="absolute top-20 right-10 w-64 h-64 bg-primary/8 rounded-full blur-3xl animate-blob" />
+        <div className="container-custom relative z-10">
+          <AnimatedSection className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-display font-bold text-foreground mb-6">
+              Our <span className="gradient-text">Portfolio</span>
             </h1>
-            <p className="text-lg text-muted-foreground animate-fade-in-up animation-delay-100">
-              Explore some of our recent projects. Each website is crafted with care to meet our clients' unique needs and goals.
+            <p className="text-lg text-muted-foreground">
+              Explore some of our recent projects. Each website is crafted with care to meet our clients' unique needs.
             </p>
-          </div>
+          </AnimatedSection>
         </div>
       </section>
 
@@ -58,106 +51,107 @@ const Portfolio = () => {
         <div className="container-custom">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <div
-                key={project.id}
-                className="group bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-xl transition-all duration-300 border border-border/50 opacity-0 animate-fade-in-up"
-                style={{ animationDelay: `${index * 100}ms`, animationFillMode: 'forwards' }}
-              >
-                {/* Project Image */}
-                <div className="aspect-video bg-gradient-to-br from-primary/10 to-primary/5 relative overflow-hidden">
-                  {project.image ? (
-                    <img src={project.image} alt={project.title} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
-                  ) : (
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-center p-6">
-                        <div className="w-16 h-16 rounded-xl bg-background/80 backdrop-blur-sm flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
-                          <ExternalLink size={24} className="text-primary" />
-                        </div>
-                        <span className="text-xs text-foreground/70 bg-background/60 backdrop-blur-sm px-3 py-1 rounded-full">
-                          Coming Soon
-                        </span>
+              <AnimatedSection key={project.id} delay={index * 120}>
+                <div className="group bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-xl transition-all duration-500 border border-border/50 hover:-translate-y-3 h-full">
+                  {/* Image with hover overlay */}
+                  <div className="aspect-video relative overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
+                    />
+                    {/* Hover overlay */}
+                    <div className="absolute inset-0 bg-primary/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+                      <div className="flex gap-3">
+                        {project.url && (
+                          <a
+                            href={project.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-12 h-12 rounded-full bg-white text-primary flex items-center justify-center hover:scale-110 transition-transform"
+                          >
+                            <ExternalLink size={20} />
+                          </a>
+                        )}
+                        <a
+                          href={project.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-12 h-12 rounded-full bg-white text-primary flex items-center justify-center hover:scale-110 transition-transform"
+                        >
+                          <Eye size={20} />
+                        </a>
                       </div>
                     </div>
-                  )}
-                  {project.url && (
-                    <a href={project.url} target="_blank" rel="noopener noreferrer" className="absolute top-3 right-3 w-8 h-8 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:bg-background">
-                      <ExternalLink size={14} className="text-primary" />
-                    </a>
-                  )}
-                </div>
+                  </div>
 
-                {/* Project Info */}
-                <div className="p-6">
-                  <div className="text-xs font-medium text-primary mb-2">{project.category}</div>
-                  <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
-                    {project.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.features.map((feature) => (
-                      <span
-                        key={feature}
-                        className="text-xs bg-secondary text-secondary-foreground px-3 py-1 rounded-full"
-                      >
-                        {feature}
-                      </span>
-                    ))}
+                  {/* Info */}
+                  <div className="p-6">
+                    <div className="text-xs font-semibold text-primary mb-2 uppercase tracking-wider">{project.category}</div>
+                    <h3 className="text-xl font-display font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+                      {project.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm mb-4 leading-relaxed">{project.description}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {project.features.map((feature) => (
+                        <span key={feature} className="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full font-medium">
+                          {feature}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
+              </AnimatedSection>
             ))}
           </div>
         </div>
       </section>
 
       {/* More Projects Coming */}
-      <section className="section-padding bg-secondary/30">
+      <section className="section-padding bg-secondary/30 wave-divider-top">
         <div className="container-custom">
-          <div className="text-center max-w-2xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-              More Projects <span className="text-primary">Coming Soon</span>
+          <AnimatedSection className="text-center max-w-2xl mx-auto">
+            <h2 className="text-2xl md:text-4xl font-display font-bold text-foreground mb-5">
+              More Projects <span className="gradient-text">Coming Soon</span>
             </h2>
-            <p className="text-muted-foreground mb-8">
-              We're constantly working on new exciting projects. Stay tuned for more amazing work, or better yet – let us build something amazing for you!
+            <p className="text-muted-foreground mb-8 text-lg">
+              We're constantly working on new exciting projects. Stay tuned for more, or let us build something amazing for you!
             </p>
             <Link to="/contact">
               <Button variant="default" size="lg" className="gap-2">
                 Start Your Project <ArrowRight size={18} />
               </Button>
             </Link>
-          </div>
+          </AnimatedSection>
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA */}
       <section className="section-padding">
         <div className="container-custom">
-          <div className="bg-primary rounded-2xl p-8 md:p-12 text-center text-primary-foreground">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              Want a Website Like These?
-            </h2>
-            <p className="text-primary-foreground/90 mb-8 max-w-xl mx-auto">
-              Let's create something amazing together. Get a free consultation and see how we can help your business.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact">
-                <Button variant="secondary" size="lg" className="gap-2">
-                  Get Free Consultation <ArrowRight size={18} />
-                </Button>
-              </Link>
-              <Link to="/services">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
-                >
-                  View Our Services
-                </Button>
-              </Link>
+          <AnimatedSection>
+            <div className="relative rounded-3xl p-10 md:p-16 text-center text-primary-foreground overflow-hidden" style={{ background: "var(--gradient-primary)" }}>
+              <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
+              <div className="relative z-10">
+                <h2 className="text-2xl md:text-4xl font-display font-bold mb-5">Want a Website Like These?</h2>
+                <p className="text-primary-foreground/90 mb-10 max-w-xl mx-auto text-lg">
+                  Let's create something amazing together. Get a free consultation today.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link to="/contact">
+                    <Button variant="secondary" size="lg" className="gap-2 font-bold">
+                      Get Free Consultation <ArrowRight size={18} />
+                    </Button>
+                  </Link>
+                  <Link to="/services">
+                    <Button variant="outline" size="lg" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground font-bold">
+                      View Our Services
+                    </Button>
+                  </Link>
+                </div>
+              </div>
             </div>
-          </div>
+          </AnimatedSection>
         </div>
       </section>
     </Layout>
