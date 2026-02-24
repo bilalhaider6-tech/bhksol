@@ -19,9 +19,7 @@ const Navbar = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -32,23 +30,21 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-background/95 backdrop-blur-md shadow-md py-3"
+          ? "bg-white/80 backdrop-blur-xl shadow-glass py-3 border-b border-white/20"
           : "bg-transparent py-5"
       }`}
     >
       <div className="container-custom">
         <nav className="flex items-center justify-between">
-          {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-            <img src={logo} alt="BHK Solutions Logo" className="w-10 h-10 object-contain" />
-            <span className="text-xl font-bold text-foreground">
-              BHK <span className="text-primary">Solutions</span>
+            <img src={logo} alt="BHK Solutions Logo" className="w-10 h-10 object-contain transition-transform group-hover:scale-110 duration-300" />
+            <span className="text-xl font-display font-bold text-foreground">
+              BHK <span className="gradient-text">Solutions</span>
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">
             {navLinks.map((link) => (
               <Link key={link.path} to={link.path}>
@@ -62,16 +58,14 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
           <div className="hidden lg:block">
             <Link to="/contact">
-              <Button variant="default" size="default">
+              <Button variant="default" size="default" className="shadow-glow">
                 Get Your Website
               </Button>
             </Link>
           </div>
 
-          {/* Mobile Menu Toggle */}
           <button
             className="lg:hidden p-2 text-foreground hover:text-primary transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -81,18 +75,17 @@ const Navbar = () => {
           </button>
         </nav>
 
-        {/* Mobile Menu */}
         <div
-          className={`lg:hidden overflow-hidden transition-all duration-300 ${
-            isMobileMenuOpen ? "max-h-96 opacity-100 mt-4" : "max-h-0 opacity-0"
+          className={`lg:hidden overflow-hidden transition-all duration-500 ${
+            isMobileMenuOpen ? "max-h-[500px] opacity-100 mt-4" : "max-h-0 opacity-0"
           }`}
         >
-          <div className="bg-card rounded-xl shadow-lg p-4 space-y-2">
+          <div className="glass-card-strong rounded-2xl p-4 space-y-2">
             {navLinks.map((link) => (
               <Link key={link.path} to={link.path} className="block">
                 <Button
                   variant={location.pathname === link.path ? "navActive" : "ghost"}
-                  className="w-full justify-start"
+                  className="w-full justify-start rounded-xl"
                 >
                   {link.name}
                 </Button>

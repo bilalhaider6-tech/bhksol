@@ -14,7 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+        display: ['Space Grotesk', 'system-ui', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -67,6 +68,8 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        "2xl": "1.25rem",
+        "3xl": "1.5rem",
       },
       boxShadow: {
         'sm': 'var(--shadow-sm)',
@@ -75,6 +78,7 @@ export default {
         'xl': 'var(--shadow-xl)',
         'glow': 'var(--shadow-glow)',
         'card': 'var(--shadow-card)',
+        'glass': 'var(--shadow-glass)',
       },
       keyframes: {
         "accordion-down": {
