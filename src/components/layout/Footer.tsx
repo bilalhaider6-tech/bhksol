@@ -24,7 +24,7 @@ const services = [
 const socials = [
   { icon: Instagram, href: "https://www.instagram.com/bq_solutions26", label: "Instagram" },
   { icon: Instagram, href: "https://www.instagram.com/bq_solutions26", label: "Instagram" },
-  { icon: Mail, href: "mailto:bqsolutions26@gmail.com", label: "Email" },
+  { icon: Mail, href: "mailto:bqsolution26@gmail.com", label: "Email" },
 ];
 
 const Footer = () => {
@@ -157,11 +157,11 @@ const Footer = () => {
               </h4>
               <ul className="space-y-4">
                 <li>
-                  <a href="mailto:bqsolutions26@gmail.com" className="flex items-start gap-3 text-background/35 hover:text-background/60 transition-colors group">
+                  <a href="mailto:bqsolution26@gmail.com" className="flex items-start gap-3 text-background/35 hover:text-background/60 transition-colors group">
                     <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
                       <Mail size={14} className="text-primary" />
                     </div>
-                    <span className="text-sm pt-1.5">bqsolutions26@gmail.com</span>
+                    <span className="text-sm pt-1.5">bqsolution26@gmail.com</span>
                   </a>
                 </li>
                 <li>
