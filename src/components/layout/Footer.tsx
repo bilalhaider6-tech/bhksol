@@ -16,15 +16,15 @@ const Footer = () => {
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
             <div className="relative z-10 text-primary-foreground">
               <h2 className="text-2xl md:text-4xl font-display font-bold mb-4">
-                Ready to Transform Your Online Presence?
+                Ready to Upgrade Your Online Presence?
               </h2>
               <p className="text-primary-foreground/90 mb-8 max-w-2xl mx-auto text-lg">
-                Let's build a website that turns visitors into customers. Get started today.
+                Let's build a website that makes your competitors nervous.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact">
                   <Button variant="secondary" size="lg" className="gap-2 font-bold">
-                    Get Free Consultation <ArrowRight size={18} />
+                    Book Your Strategy Call <ArrowRight size={18} />
                   </Button>
                 </Link>
                 <a href="https://wa.me/923708099033" target="_blank" rel="noopener noreferrer">
@@ -51,7 +51,7 @@ const Footer = () => {
                 </span>
               </Link>
               <p className="text-white/50 text-sm leading-relaxed">
-                Professional, modern, and results-driven web development that turns visitors into customers.
+                Premium website design & development agency. We build high-converting websites that dominate industries.
               </p>
               <div className="flex gap-3">
                 {[
@@ -85,9 +85,9 @@ const Footer = () => {
 
             {/* Services */}
             <div>
-              <h4 className="font-display font-semibold text-sm uppercase tracking-wider text-white/80 mb-5">Services</h4>
+              <h4 className="font-display font-semibold text-sm uppercase tracking-wider text-white/80 mb-5">We Build</h4>
               <ul className="space-y-2.5">
-                {["Business Websites", "E-commerce Stores", "Landing Pages", "AI-Powered Websites", "Website Redesign", "SEO Optimization"].map((service) => (
+                {["Corporate Websites", "Export Company Websites", "Ecommerce Websites", "Personal Brand Websites", "Landing Pages"].map((service) => (
                   <li key={service}>
                     <Link to="/services" className="text-white/45 hover:text-[hsl(199_89%_48%)] transition-colors text-sm inline-flex items-center gap-1.5 group">
                       <span className="w-0 group-hover:w-2 h-px bg-[hsl(199_89%_48%)] transition-all duration-300" />
@@ -122,7 +122,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Divider & Bottom */}
           <div className="border-t border-white/[0.06] mt-10 pt-6 flex flex-col md:flex-row justify-between items-center gap-3">
             <p className="text-white/30 text-xs">© {currentYear} BQ Solutions. All rights reserved.</p>
             <div className="flex gap-5">
