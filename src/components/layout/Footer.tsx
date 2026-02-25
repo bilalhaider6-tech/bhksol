@@ -45,7 +45,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-2">
-              <img src={logo} alt="BQ Solutions Logo" className="w-10 h-10 object-contain" />
+              <img src={logo} alt="BQ Solutions Logo" className="w-12 h-12 object-contain" />
               <span className="text-xl font-display font-bold">
                 BQ <span className="text-primary">Solutions</span>
               </span>
