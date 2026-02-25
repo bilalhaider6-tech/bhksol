@@ -210,6 +210,39 @@ const Index = () => {
         </div>
       </section>
 
+      {/* SECTION – RESULTS OF A PREMIUM WEBSITE */}
+      <section className="section-padding">
+        <div className="container-custom">
+          <AnimatedSection className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-5">
+              Results of a <span className="gradient-text">Premium Website</span>
+            </h2>
+          </AnimatedSection>
+
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            {[
+              { num: "01", icon: TrendingUp, title: '"We Get More High-Quality Orders"', desc: "Serious buyers. Real inquiries. More closed deals." },
+              { num: "02", icon: Users, title: '"We Attract International Clients"', desc: "Our website builds instant global trust." },
+              { num: "03", icon: Eye, title: '"Our Brand Looks Premium"', desc: "Modern design that positions us as an authority." },
+              { num: "04", icon: Zap, title: '"We Convert Visitors Faster"', desc: "Clear structure. Strong CTAs. More action." },
+            ].map((item, index) => (
+              <AnimatedSection key={item.num} delay={index * 100}>
+                <div className="relative bg-card rounded-2xl p-8 pl-10 border border-border/50 shadow-card hover:shadow-xl hover:-translate-y-1 transition-all duration-500 group h-full">
+                  <span className="absolute top-6 right-6 text-5xl font-display font-black text-primary/10 group-hover:text-primary/20 transition-colors select-none">
+                    {item.num}
+                  </span>
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
+                    <item.icon size={24} />
+                  </div>
+                  <h3 className="text-lg font-display font-bold text-foreground mb-2">{item.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* SECTION 5 – WHY CHOOSE US */}
       <section className="section-padding">
         <div className="container-custom">
