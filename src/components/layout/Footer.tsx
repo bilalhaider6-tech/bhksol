@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Instagram, Mail, Phone, MapPin, ArrowRight, ArrowUpRight } from "lucide-react";
+import { Instagram, Mail, Phone, MapPin, ArrowRight, ArrowUpRight, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import logo from "@/assets/logo.png";
@@ -23,7 +23,7 @@ const services = [
 
 const socials = [
   { icon: Instagram, href: "https://www.instagram.com/bq_solutions26", label: "Instagram" },
-  { icon: Instagram, href: "https://www.instagram.com/bq_solutions26", label: "Instagram" },
+  { icon: MessageCircle, href: "https://wa.me/923708099033", label: "WhatsApp" },
   { icon: Mail, href: "mailto:bqsolution26@gmail.com", label: "Email" },
 ];
 
