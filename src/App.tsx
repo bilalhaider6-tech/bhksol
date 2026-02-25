@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -6,12 +7,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import PageLoader from "./components/PageLoader";
 import Index from "./pages/Index";
-import Services from "./pages/Services";
-import About from "./pages/About";
-import Portfolio from "./pages/Portfolio";
-import Reviews from "./pages/Reviews";
-import Contact from "./pages/Contact";
-import NotFound from "./pages/NotFound";
+
+const Services = lazy(() => import("./pages/Services"));
+const About = lazy(() => import("./pages/About"));
+const Portfolio = lazy(() => import("./pages/Portfolio"));
+const Reviews = lazy(() => import("./pages/Reviews"));
+const Contact = lazy(() => import("./pages/Contact"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
 
@@ -23,15 +25,17 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/reviews" element={<Reviews />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <Suspense fallback={null}>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/reviews" element={<Reviews />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
