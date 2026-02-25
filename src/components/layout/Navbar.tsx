@@ -39,7 +39,7 @@ const Navbar = () => {
       <div className="container-custom">
         <nav className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 group">
-            <img src={logo} alt="BQ Solutions Logo" className="w-28 h-28 object-contain transition-transform group-hover:scale-110 duration-300" />
+            <img src={logo} alt="BQ Solutions Logo" className="w-14 h-14 object-contain transition-transform group-hover:scale-110 duration-300" />
             <span className="text-xl font-display font-bold text-foreground">
               BQ <span className="gradient-text">Solutions</span>
             </span>

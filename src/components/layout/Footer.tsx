@@ -44,8 +44,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="space-y-4">
-            <Link to="/" className="flex items-center gap-2">
-              <img src={logo} alt="BQ Solutions Logo" className="w-18 h-18 object-contain" />
+            <Link to="/" className="flex flex-col items-start gap-1">
+              <img src={logo} alt="BQ Solutions Logo" className="w-16 h-16 object-contain" />
               <span className="text-xl font-display font-bold">
                 BQ <span className="text-primary">Solutions</span>
               </span>
