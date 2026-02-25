@@ -11,7 +11,6 @@ import {
   MapPin,
   Send,
   MessageCircle,
-  Facebook,
   Instagram,
   Clock,
 } from "lucide-react";
@@ -121,9 +120,6 @@ const Contact = () => {
                 <div className="grid grid-cols-2 gap-4">
                   <a href="https://wa.me/923708099033" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 bg-[hsl(142,70%,45%)] text-white rounded-2xl py-4 px-6 font-medium hover:opacity-90 hover:-translate-y-1 transition-all duration-300">
                     <MessageCircle size={20} /> WhatsApp
-                  </a>
-                  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 bg-primary text-primary-foreground rounded-2xl py-4 px-6 font-medium hover:opacity-90 hover:-translate-y-1 transition-all duration-300">
-                    <Facebook size={20} /> Facebook
                   </a>
                   <a href="https://www.instagram.com/bq_solutions26" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 bg-[hsl(330,80%,55%)] text-white rounded-2xl py-4 px-6 font-medium hover:opacity-90 hover:-translate-y-1 transition-all duration-300">
                     <Instagram size={20} /> Instagram
