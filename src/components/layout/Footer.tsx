@@ -45,9 +45,9 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-2">
-              <img src={logo} alt="BHK Solutions Logo" className="w-10 h-10 object-contain" />
+              <img src={logo} alt="BQ Solutions Logo" className="w-10 h-10 object-contain" />
               <span className="text-xl font-display font-bold">
-                BHK <span className="text-primary">Solutions</span>
+                BQ <span className="text-primary">Solutions</span>
               </span>
             </Link>
             <p className="text-white/60 text-sm leading-relaxed">
@@ -118,7 +118,7 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-white/40 text-sm">© {currentYear} BHK Solutions. All rights reserved.</p>
+          <p className="text-white/40 text-sm">© {currentYear} BQ Solutions. All rights reserved.</p>
           <div className="flex gap-6">
             <Link to="/privacy" className="text-white/40 hover:text-primary transition-colors text-sm">Privacy Policy</Link>
             <Link to="/terms" className="text-white/40 hover:text-primary transition-colors text-sm">Terms of Service</Link>

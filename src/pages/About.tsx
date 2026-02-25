@@ -30,7 +30,7 @@ const About = () => {
         <div className="container-custom relative z-10">
           <AnimatedSection className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-display font-bold text-foreground mb-6">
-              About <span className="gradient-text">BHK Solutions</span>
+              About <span className="gradient-text">BQ Solutions</span>
             </h1>
             <p className="text-lg text-muted-foreground">
               We're a passionate team of web developers dedicated to helping businesses succeed online through stunning, high-performing websites.
@@ -48,7 +48,7 @@ const About = () => {
                 Our <span className="gradient-text">Story</span>
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
-                <p>BHK Solutions was founded with a simple mission: to help businesses of all sizes establish a powerful online presence without the complexity and confusion that often comes with web development.</p>
+                <p>BQ Solutions was founded with a simple mission: to help businesses of all sizes establish a powerful online presence without the complexity and confusion that often comes with web development.</p>
                 <p>We noticed that many small and medium businesses struggle to find reliable web development partners who understand their needs, deliver on time, and don't break the bank. That's where we come in.</p>
                 <p>Today, we've helped over 100 businesses transform their digital presence, from local startups to established brands.</p>
               </div>
@@ -58,9 +58,9 @@ const About = () => {
                 <div className="aspect-square rounded-3xl bg-primary/5 flex items-center justify-center overflow-hidden border border-primary/10">
                   <div className="text-center p-8">
                     <div className="w-24 h-24 rounded-2xl bg-primary text-primary-foreground flex items-center justify-center mx-auto mb-5 shadow-glow">
-                      <span className="text-4xl font-display font-bold">B</span>
+                      <span className="text-4xl font-display font-bold">BQ</span>
                     </div>
-                    <h3 className="text-2xl font-display font-bold text-foreground mb-2">BHK Solutions</h3>
+                    <h3 className="text-2xl font-display font-bold text-foreground mb-2">BQ Solutions</h3>
                     <p className="text-muted-foreground text-sm">Building Digital Success</p>
                   </div>
                 </div>
@@ -136,7 +136,7 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <AnimatedSection direction="left">
               <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-6">
-                Why Choose <span className="gradient-text">BHK Solutions?</span>
+                Why Choose <span className="gradient-text">BQ Solutions?</span>
               </h2>
               <p className="text-muted-foreground mb-8 text-lg">
                 We're not just another web development agency. Here's what makes us different:
