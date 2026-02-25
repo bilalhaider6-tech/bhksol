@@ -29,7 +29,7 @@ const Footer = () => {
                   Get Free Consultation <ArrowRight size={18} />
                 </Button>
               </Link>
-              <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/923708099033" target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" size="lg" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground font-bold">
                   WhatsApp Us
                 </Button>
@@ -57,7 +57,7 @@ const Footer = () => {
               {[
                 { icon: Facebook, href: "https://facebook.com" },
                 { icon: Instagram, href: "https://instagram.com" },
-                { icon: Mail, href: "mailto:hello@bhksolutions.com" },
+                { icon: Mail, href: "mailto:bilalhaidermuhammad6@gmail.com" },
               ].map((social) => (
                 <a key={social.href} href={social.href} target="_blank" rel="noopener noreferrer"
                   className="w-10 h-10 rounded-xl bg-white/10 hover:bg-primary transition-all duration-300 flex items-center justify-center hover:scale-110">
@@ -102,15 +102,15 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <Mail size={18} className="text-primary mt-0.5 flex-shrink-0" />
-                <a href="mailto:hello@bhksolutions.com" className="text-white/60 hover:text-primary transition-colors text-sm">hello@bhksolutions.com</a>
+                <a href="mailto:bilalhaidermuhammad6@gmail.com" className="text-white/60 hover:text-primary transition-colors text-sm">bilalhaidermuhammad6@gmail.com</a>
               </li>
               <li className="flex items-start gap-3">
                 <Phone size={18} className="text-primary mt-0.5 flex-shrink-0" />
-                <a href="tel:+1234567890" className="text-white/60 hover:text-primary transition-colors text-sm">+1 (234) 567-890</a>
+                <a href="tel:+9203708099033" className="text-white/60 hover:text-primary transition-colors text-sm">+92 0370-8099033</a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-primary mt-0.5 flex-shrink-0" />
-                <span className="text-white/60 text-sm">Available Worldwide</span>
+                <span className="text-white/60 text-sm">B-245 Block 13, F.B Area, Karachi</span>
               </li>
             </ul>
           </div>

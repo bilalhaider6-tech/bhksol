@@ -111,10 +111,10 @@ const Contact = () => {
 
               <div className="space-y-6 mb-10">
                 {[
-                  { icon: Mail, title: "Email Us", info: "hello@bhksolutions.com", href: "mailto:hello@bhksolutions.com" },
-                  { icon: Phone, title: "Call Us", info: "+1 (234) 567-890", href: "tel:+1234567890" },
+                  { icon: Mail, title: "Email Us", info: "bilalhaidermuhammad6@gmail.com", href: "mailto:bilalhaidermuhammad6@gmail.com" },
+                  { icon: Phone, title: "Call Us", info: "+92 0370-8099033", href: "tel:+9203708099033" },
                   { icon: Clock, title: "Working Hours", info: "Mon - Fri: 9:00 AM - 6:00 PM" },
-                  { icon: MapPin, title: "Location", info: "Available Worldwide" },
+                  { icon: MapPin, title: "Location", info: "B-245 Block 13, F.B Area, Karachi" },
                 ].map((item) => (
                   <div key={item.title} className="flex items-start gap-4 group">
                     <div className="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
@@ -136,7 +136,7 @@ const Contact = () => {
               <div className="space-y-4">
                 <h3 className="font-display font-semibold text-foreground">Quick Contact</h3>
                 <div className="grid grid-cols-2 gap-4">
-                  <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer"
+                  <a href="https://wa.me/923708099033" target="_blank" rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2 bg-[hsl(142,70%,45%)] text-white rounded-2xl py-4 px-6 font-medium hover:opacity-90 hover:-translate-y-1 transition-all duration-300">
                     <MessageCircle size={20} /> WhatsApp
                   </a>
@@ -148,7 +148,7 @@ const Contact = () => {
                     className="flex items-center justify-center gap-2 bg-[hsl(330,80%,55%)] text-white rounded-2xl py-4 px-6 font-medium hover:opacity-90 hover:-translate-y-1 transition-all duration-300">
                     <Instagram size={20} /> Instagram
                   </a>
-                  <a href="mailto:hello@bhksolutions.com"
+                  <a href="mailto:bilalhaidermuhammad6@gmail.com"
                     className="flex items-center justify-center gap-2 bg-foreground text-background rounded-2xl py-4 px-6 font-medium hover:opacity-90 hover:-translate-y-1 transition-all duration-300">
                     <Mail size={20} /> Email
                   </a>
