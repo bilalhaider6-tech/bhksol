@@ -81,7 +81,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">Phone Number</label>
-                    <Input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleChange} placeholder="+92 0370-8099033" className="h-12 rounded-xl bg-white/50 border-border/50 focus:bg-white transition-colors" />
+                    <Input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleChange} placeholder="+92-3708099033" className="h-12 rounded-xl bg-white/50 border-border/50 focus:bg-white transition-colors" />
                   </div>
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">Tell us about your project</label>
@@ -104,7 +104,7 @@ const Contact = () => {
               <div className="space-y-6 mb-10">
                 {[
                   { icon: Mail, title: "Email Us", info: "bqsolution26@gmail.com", href: "mailto:bqsolution26@gmail.com" },
-                  { icon: Phone, title: "Call Us", info: "+92 0370-8099033", href: "tel:+9203708099033" },
+                  { icon: Phone, title: "Call Us", info: "+92-3708099033", href: "tel:+923708099033" },
                   { icon: Clock, title: "Working Hours", info: "Mon - Fri: 9:00 AM - 6:00 PM" },
                   { icon: MapPin, title: "Location", info: "B-245 Block 13, F.B Area, Karachi" },
                 ].map((item) => (
