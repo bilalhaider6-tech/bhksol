@@ -116,12 +116,15 @@ const Services = () => {
               { step: "04", title: "Development & Launch", description: "Clean code, optimization, and a flawless launch.", icon: Rocket },
             ].map((phase, index) => (
               <AnimatedSection key={phase.step} delay={index * 100}>
-                <div className="text-center group">
-                  <div className="w-20 h-20 rounded-2xl bg-primary text-primary-foreground text-xl font-display font-bold flex items-center justify-center mx-auto mb-5 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-glow">
-                    {phase.step}
+                <div className="relative bg-card rounded-2xl p-8 pt-12 text-center group border border-border/50 shadow-card hover:shadow-xl hover:-translate-y-2 transition-all duration-500">
+                  <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-xs font-display font-bold px-4 py-1.5 rounded-full shadow-glow tracking-wider">
+                    STEP {phase.step}
+                  </span>
+                  <div className="w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mx-auto mb-5 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
+                    <phase.icon size={28} />
                   </div>
                   <h3 className="text-xl font-display font-semibold text-foreground mb-2">{phase.title}</h3>
-                  <p className="text-muted-foreground text-sm">{phase.description}</p>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{phase.description}</p>
                 </div>
               </AnimatedSection>
             ))}
