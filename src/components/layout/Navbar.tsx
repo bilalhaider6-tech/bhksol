@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ArrowRight } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import logo from "@/assets/logo.png";
 
 const navLinks = [
@@ -28,77 +29,159 @@ const Navbar = () => {
     setIsMobileMenuOpen(false);
   }, [location]);
 
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = isMobileMenuOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [isMobileMenuOpen]);
+
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
         isScrolled
-          ? "bg-white/80 backdrop-blur-xl shadow-glass py-3 border-b border-white/20"
-          : "bg-transparent py-5"
+          ? "py-2"
+          : "py-4"
       }`}
     >
-      <div className="container-custom">
+      {/* Background layer with blur */}
+      <div
+        className={`absolute inset-0 transition-all duration-700 ${
+          isScrolled
+            ? "bg-background/70 backdrop-blur-2xl shadow-[0_1px_0_0_hsl(var(--border)/0.5),0_4px_20px_-4px_hsl(var(--foreground)/0.08)]"
+            : "bg-transparent"
+        }`}
+      />
+
+      <div className="container-custom relative z-10">
         <nav className="flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2 group">
-            <img src={logo} alt="BQ Solutions Logo" className="w-28 h-28 object-contain transition-transform group-hover:scale-110 duration-300" />
-            <span className="text-xl font-display font-bold text-foreground">
-              BQ <span className="gradient-text">Solutions</span>
-            </span>
+          {/* Logo */}
+          <Link to="/" className="flex items-center gap-2.5 group">
+            <motion.img
+              src={logo}
+              alt="BQ Solutions Logo"
+              className="w-14 h-14 md:w-20 md:h-20 object-contain"
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 400, damping: 20 }}
+            />
+            <div className="flex flex-col">
+              <span className="text-lg md:text-xl font-display font-bold text-foreground leading-tight">
+                BQ <span className="gradient-text">Solutions</span>
+              </span>
+              <span className="text-[10px] text-muted-foreground font-medium tracking-widest uppercase hidden sm:block">
+                Premium Web Agency
+              </span>
+            </div>
           </Link>
 
-          <div className="hidden lg:flex items-center gap-1">
-            {navLinks.map((link) => (
-              <Link key={link.path} to={link.path}>
-                <Button
-                  variant={location.pathname === link.path ? "navActive" : "nav"}
-                  size="sm"
-                >
-                  {link.name}
-                </Button>
-              </Link>
-            ))}
+          {/* Desktop Nav */}
+          <div className="hidden lg:flex items-center gap-0.5 bg-foreground/[0.03] rounded-full px-1.5 py-1.5 border border-border/40">
+            {navLinks.map((link) => {
+              const isActive = location.pathname === link.path;
+              return (
+                <Link key={link.path} to={link.path} className="relative">
+                  {isActive && (
+                    <motion.div
+                      layoutId="navIndicator"
+                      className="absolute inset-0 bg-primary rounded-full"
+                      transition={{ type: "spring", stiffness: 500, damping: 35 }}
+                    />
+                  )}
+                  <span
+                    className={`relative z-10 px-4 py-2 text-sm font-medium rounded-full inline-block transition-colors duration-300 ${
+                      isActive
+                        ? "text-primary-foreground"
+                        : "text-muted-foreground hover:text-foreground"
+                    }`}
+                  >
+                    {link.name}
+                  </span>
+                </Link>
+              );
+            })}
           </div>
 
+          {/* Desktop CTA */}
           <div className="hidden lg:block">
             <Link to="/contact">
-              <Button variant="default" size="default" className="shadow-glow">
+              <Button variant="default" size="default" className="shadow-glow gap-2 group">
                 Get Your Website
+                <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
               </Button>
             </Link>
           </div>
 
-          <button
-            className="lg:hidden p-2 text-foreground hover:text-primary transition-colors"
+          {/* Mobile Toggle */}
+          <motion.button
+            className="lg:hidden relative w-10 h-10 flex items-center justify-center rounded-xl bg-foreground/5 border border-border/40 text-foreground"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
+            whileTap={{ scale: 0.92 }}
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+            <AnimatePresence mode="wait">
+              {isMobileMenuOpen ? (
+                <motion.div key="close" initial={{ rotate: -90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: 90, opacity: 0 }} transition={{ duration: 0.2 }}>
+                  <X size={20} />
+                </motion.div>
+              ) : (
+                <motion.div key="menu" initial={{ rotate: 90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: -90, opacity: 0 }} transition={{ duration: 0.2 }}>
+                  <Menu size={20} />
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </motion.button>
         </nav>
-
-        <div
-          className={`lg:hidden overflow-hidden transition-all duration-500 ${
-            isMobileMenuOpen ? "max-h-[500px] opacity-100 mt-4" : "max-h-0 opacity-0"
-          }`}
-        >
-          <div className="glass-card-strong rounded-2xl p-4 space-y-2">
-            {navLinks.map((link) => (
-              <Link key={link.path} to={link.path} className="block">
-                <Button
-                  variant={location.pathname === link.path ? "navActive" : "ghost"}
-                  className="w-full justify-start rounded-xl"
-                >
-                  {link.name}
-                </Button>
-              </Link>
-            ))}
-            <Link to="/contact" className="block pt-2">
-              <Button variant="default" className="w-full">
-                Get Your Website
-              </Button>
-            </Link>
-          </div>
-        </div>
       </div>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            className="lg:hidden absolute top-full left-0 right-0 px-4 pt-2 pb-4"
+          >
+            <div className="bg-background/95 backdrop-blur-2xl rounded-2xl p-3 space-y-1 shadow-xl border border-border/50">
+              {navLinks.map((link, i) => {
+                const isActive = location.pathname === link.path;
+                return (
+                  <motion.div
+                    key={link.path}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: i * 0.05, duration: 0.3 }}
+                  >
+                    <Link
+                      to={link.path}
+                      className={`flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 ${
+                        isActive
+                          ? "bg-primary text-primary-foreground"
+                          : "text-muted-foreground hover:bg-foreground/5 hover:text-foreground"
+                      }`}
+                    >
+                      {link.name}
+                      {isActive && <ArrowRight size={14} className="ml-auto" />}
+                    </Link>
+                  </motion.div>
+                );
+              })}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3, duration: 0.3 }}
+                className="pt-2"
+              >
+                <Link to="/contact" className="block">
+                  <Button variant="default" className="w-full shadow-glow gap-2">
+                    Get Your Website <ArrowRight size={16} />
+                  </Button>
+                </Link>
+              </motion.div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 };
