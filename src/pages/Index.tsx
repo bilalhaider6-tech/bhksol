@@ -278,7 +278,7 @@ const Index = () => {
                       Get Your Website <ArrowRight size={20} />
                     </Button>
                   </Link>
-                  <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/923708099033" target="_blank" rel="noopener noreferrer">
                     <Button
                       variant="outline"
                       size="xl"
