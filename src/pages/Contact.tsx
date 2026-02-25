@@ -95,7 +95,7 @@ const Contact = () => {
 
               <div className="space-y-6 mb-10">
                 {[
-                  { icon: Mail, title: "Email Us", info: "bilalhaidermuhammad6@gmail.com", href: "mailto:bilalhaidermuhammad6@gmail.com" },
+                  { icon: Mail, title: "Email Us", info: "bqsolutions26@gmail.com", href: "mailto:bqsolutions26@gmail.com" },
                   { icon: Phone, title: "Call Us", info: "+92 0370-8099033", href: "tel:+9203708099033" },
                   { icon: Clock, title: "Working Hours", info: "Mon - Fri: 9:00 AM - 6:00 PM" },
                   { icon: MapPin, title: "Location", info: "B-245 Block 13, F.B Area, Karachi" },
@@ -125,10 +125,10 @@ const Contact = () => {
                   <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 bg-primary text-primary-foreground rounded-2xl py-4 px-6 font-medium hover:opacity-90 hover:-translate-y-1 transition-all duration-300">
                     <Facebook size={20} /> Facebook
                   </a>
-                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 bg-[hsl(330,80%,55%)] text-white rounded-2xl py-4 px-6 font-medium hover:opacity-90 hover:-translate-y-1 transition-all duration-300">
+                  <a href="https://www.instagram.com/bq_solutions26" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 bg-[hsl(330,80%,55%)] text-white rounded-2xl py-4 px-6 font-medium hover:opacity-90 hover:-translate-y-1 transition-all duration-300">
                     <Instagram size={20} /> Instagram
                   </a>
-                  <a href="mailto:bilalhaidermuhammad6@gmail.com" className="flex items-center justify-center gap-2 bg-foreground text-background rounded-2xl py-4 px-6 font-medium hover:opacity-90 hover:-translate-y-1 transition-all duration-300">
+                  <a href="mailto:bqsolutions26@gmail.com" className="flex items-center justify-center gap-2 bg-foreground text-background rounded-2xl py-4 px-6 font-medium hover:opacity-90 hover:-translate-y-1 transition-all duration-300">
                     <Mail size={20} /> Email
                   </a>
                 </div>
