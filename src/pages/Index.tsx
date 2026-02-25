@@ -45,7 +45,7 @@ const whyChooseUs = [
 ];
 
 const testimonials = [
-  { name: "Sarah Johnson", role: "CEO, TechStart Inc.", content: "BHK Solutions transformed our online presence completely. Our leads increased by 300% within the first month!", rating: 5 },
+  { name: "Sarah Johnson", role: "CEO, TechStart Inc.", content: "BQ Solutions transformed our online presence completely. Our leads increased by 300% within the first month!", rating: 5 },
   { name: "Michael Chen", role: "Founder, LocalBrew Coffee", content: "Professional, fast, and incredibly talented. They understood our vision and delivered beyond expectations.", rating: 5 },
   { name: "Emily Rodriguez", role: "Marketing Director, StyleHub", content: "The best investment we made for our business. The website pays for itself every single month.", rating: 5 },
 ];
@@ -187,7 +187,7 @@ const Index = () => {
           <AnimatedSection className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-5">
               Why Choose{" "}
-              <span className="gradient-text">BHK Solutions</span>
+              <span className="gradient-text">BQ Solutions</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
               We don't just build websites – we build digital experiences that drive real business results.

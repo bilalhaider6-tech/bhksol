@@ -24,7 +24,7 @@ const PageLoader = () => {
               <div className="absolute inset-0 rounded-full border-4 border-transparent border-t-primary animate-spin" />
             </div>
             <span className="text-lg font-display font-bold text-foreground">
-              BHK <span className="text-primary">Solutions</span>
+              BQ <span className="text-primary">Solutions</span>
             </span>
           </div>
         </motion.div>
