@@ -188,12 +188,8 @@ const Footer = () => {
               © {currentYear} BQ Solutions. Crafted with precision.
             </p>
             <div className="flex gap-6">
-              <Link to="/privacy" className="text-background/20 hover:text-background/40 transition-colors text-xs">
-                Privacy Policy
-              </Link>
-              <Link to="/terms" className="text-background/20 hover:text-background/40 transition-colors text-xs">
-                Terms of Service
-              </Link>
+              <span className="text-background/20 text-xs">Privacy Policy</span>
+              <span className="text-background/20 text-xs">Terms of Service</span>
             </div>
           </div>
         </div>
