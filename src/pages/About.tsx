@@ -16,9 +16,9 @@ import {
 
 const values = [
   { icon: Heart, title: "Client First", description: "Your success is our success. We prioritize understanding your needs and delivering solutions that exceed expectations." },
-  { icon: Award, title: "Quality Excellence", description: "We never compromise on quality. Every website we build meets the highest standards of design and functionality." },
+  { icon: Award, title: "Quality Excellence", description: "We never compromise on quality. Every website we build meets the highest international standards of design and performance." },
   { icon: Lightbulb, title: "Innovation", description: "We stay ahead of trends and technologies to bring fresh, innovative solutions to every project." },
-  { icon: Users, title: "Transparency", description: "Clear communication and honest pricing. No hidden fees, no surprises – just straightforward partnership." },
+  { icon: Users, title: "Transparency", description: "Clear communication and honest pricing. No hidden fees, no surprises — just straightforward partnership." },
 ];
 
 const About = () => {
@@ -34,7 +34,7 @@ const About = () => {
               About <span className="gradient-text">BQ Solutions</span>
             </h1>
             <p className="text-lg text-muted-foreground">
-              We're a passionate team of web developers dedicated to helping businesses succeed online through stunning, high-performing websites.
+              We build digital assets — not just websites. Every project is strategically designed to turn visitors into paying clients.
             </p>
           </AnimatedSection>
         </div>
@@ -46,12 +46,12 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <AnimatedSection direction="left" className="order-2 lg:order-1">
               <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-6">
-                Our <span className="gradient-text">Story</span>
+                We Build <span className="gradient-text">Digital Assets</span> — Not Just Websites
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
-                <p>BQ Solutions was founded with a simple mission: to help businesses of all sizes establish a powerful online presence without the complexity and confusion that often comes with web development.</p>
-                <p>We noticed that many small and medium businesses struggle to find reliable web development partners who understand their needs, deliver on time, and don't break the bank. That's where we come in.</p>
-                <p>Today, we've helped over 100 businesses transform their digital presence, from local startups to established brands.</p>
+                <p>At BQ Solutions, we don't offer average websites. We specialize in creating premium, conversion-driven websites that position your business as an authority in your industry.</p>
+                <p>Every website we build is strategically designed to turn visitors into paying clients. We focus on performance, design psychology, and user experience to ensure your website works 24/7 as your best salesperson.</p>
+                <p>We serve international businesses, startups, ecommerce brands, and service companies who are serious about their online presence.</p>
               </div>
             </AnimatedSection>
             <AnimatedSection direction="right" className="order-1 lg:order-2">
@@ -60,7 +60,7 @@ const About = () => {
                   <div className="text-center p-8">
                     <img src={logo} alt="BQ Solutions Logo" className="w-32 h-32 object-contain mx-auto mb-5" />
                     <h3 className="text-2xl font-display font-bold text-foreground mb-2">BQ Solutions</h3>
-                    <p className="text-muted-foreground text-sm">Building Digital Success</p>
+                    <p className="text-muted-foreground text-sm">Premium Website Specialists</p>
                   </div>
                 </div>
                 <div className="absolute -top-6 -right-6 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
@@ -82,7 +82,7 @@ const About = () => {
                 </div>
                 <h3 className="text-2xl font-display font-bold text-foreground mb-4">Our Mission</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  To empower businesses with websites that not only look stunning but also drive real results. We believe every business deserves a professional online presence.
+                  To empower businesses with premium websites that don't just look stunning — but drive real results. Every website should be a revenue-generating asset.
                 </p>
               </div>
             </AnimatedSection>
@@ -93,7 +93,7 @@ const About = () => {
                 </div>
                 <h3 className="text-2xl font-display font-bold text-foreground mb-4">Our Vision</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  To be the most trusted web development partner for businesses worldwide, known for delivering exceptional quality, outstanding service, and measurable results.
+                  To be the most trusted premium website agency for businesses worldwide — known for delivering exceptional quality, outstanding results, and websites that dominate industries.
                 </p>
               </div>
             </AnimatedSection>
@@ -108,9 +108,6 @@ const About = () => {
             <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-5">
               Our <span className="gradient-text">Core Values</span>
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              These principles guide everything we do and how we serve our clients.
-            </p>
           </AnimatedSection>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -138,17 +135,17 @@ const About = () => {
                 Why Choose <span className="gradient-text">BQ Solutions?</span>
               </h2>
               <p className="text-muted-foreground mb-8 text-lg">
-                We're not just another web development agency. Here's what makes us different:
+                We don't use cheap templates. We don't build outdated designs. We don't create generic websites.
               </p>
               <div className="space-y-4">
                 {[
-                  "Personalized attention to every project",
-                  "Transparent pricing with no hidden fees",
+                  "Premium, custom-designed websites only",
+                  "Conversion-focused structure & layout",
+                  "International-standard quality",
                   "Fast turnaround without compromising quality",
                   "Ongoing support and maintenance",
                   "Results-driven approach focused on ROI",
-                  "Modern, mobile-first designs",
-                  "SEO-optimized from the ground up",
+                  "Mobile-first, speed-optimized builds",
                   "24/7 customer support available",
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
@@ -165,7 +162,7 @@ const About = () => {
                   { value: "50+", label: "Happy Clients" },
                   { value: "5+", label: "Years Experience" },
                   { value: "98%", label: "Client Satisfaction" },
-                ].map((stat, index) => (
+                ].map((stat) => (
                   <div key={stat.label} className="bg-card rounded-2xl p-6 shadow-card text-center hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border border-border/50">
                     <div className="text-4xl font-display font-bold gradient-text mb-2">{stat.value}</div>
                     <div className="text-muted-foreground text-sm">{stat.label}</div>
@@ -186,11 +183,11 @@ const About = () => {
               <div className="relative z-10">
                 <h2 className="text-2xl md:text-4xl font-display font-bold mb-5">Ready to Work Together?</h2>
                 <p className="text-primary-foreground/90 mb-10 max-w-xl mx-auto text-lg">
-                  Let's discuss your project and see how we can help your business grow online.
+                  Let's build a website that positions your business as the authority in your industry.
                 </p>
                 <Link to="/contact">
                   <Button variant="secondary" size="lg" className="gap-2 font-bold">
-                    Get In Touch <ArrowRight size={18} />
+                    Book Your Strategy Call <ArrowRight size={18} />
                   </Button>
                 </Link>
               </div>

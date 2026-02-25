@@ -69,13 +69,9 @@ const Reviews = () => {
             </h2>
           </AnimatedSection>
 
-          {/* Carousel */}
           <div className="relative max-w-3xl mx-auto">
             <div className="overflow-hidden">
-              <div
-                className="flex transition-transform duration-500 ease-out"
-                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-              >
+              <div className="flex transition-transform duration-500 ease-out" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
                 {featuredTestimonials.map((t) => (
                   <div key={t.id} className="w-full flex-shrink-0 px-4">
                     <div className="bg-card rounded-2xl p-10 shadow-card border border-border/50 text-center relative">
@@ -93,26 +89,15 @@ const Reviews = () => {
                 ))}
               </div>
             </div>
-            <button
-              onClick={prevSlide}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-10 h-10 rounded-full bg-card shadow-lg border border-border/50 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all"
-            >
+            <button onClick={prevSlide} className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-10 h-10 rounded-full bg-card shadow-lg border border-border/50 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all">
               <ChevronLeft size={20} />
             </button>
-            <button
-              onClick={nextSlide}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-10 h-10 rounded-full bg-card shadow-lg border border-border/50 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all"
-            >
+            <button onClick={nextSlide} className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-10 h-10 rounded-full bg-card shadow-lg border border-border/50 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all">
               <ChevronRight size={20} />
             </button>
-            {/* Dots */}
             <div className="flex justify-center gap-2 mt-8">
               {featuredTestimonials.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setCurrentSlide(i)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${i === currentSlide ? "bg-primary w-8" : "bg-primary/20"}`}
-                />
+                <button key={i} onClick={() => setCurrentSlide(i)} className={`w-3 h-3 rounded-full transition-all duration-300 ${i === currentSlide ? "bg-primary w-8" : "bg-primary/20"}`} />
               ))}
             </div>
           </div>
@@ -169,7 +154,7 @@ const Reviews = () => {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link to="/contact">
                     <Button variant="secondary" size="lg" className="gap-2 font-bold">
-                      Get Started Today <ArrowRight size={18} />
+                      Book Your Strategy Call <ArrowRight size={18} />
                     </Button>
                   </Link>
                   <Link to="/portfolio">

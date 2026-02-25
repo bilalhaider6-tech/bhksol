@@ -25,7 +25,7 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     await new Promise((resolve) => setTimeout(resolve, 1500));
-    toast({ title: "Message Sent!", description: "Thank you for contacting us. We'll get back to you within 24 hours." });
+    toast({ title: "Message Sent!", description: "Thank you for reaching out. We'll get back to you within 24 hours." });
     setFormData({ name: "", email: "", phone: "", message: "" });
     setIsSubmitting(false);
   };
@@ -42,11 +42,11 @@ const Contact = () => {
         <div className="container-custom relative z-10">
           <AnimatedSection className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-display font-bold text-foreground mb-6">
-              Let's Build Something{" "}
-              <span className="gradient-text">Amazing Together</span>
+              Book Your Free{" "}
+              <span className="gradient-text">Strategy Call</span>
             </h1>
             <p className="text-lg text-muted-foreground">
-              Ready to transform your online presence? Get in touch with us today for a free consultation.
+              Ready for a premium website that dominates your industry? Let's talk about your project.
             </p>
           </AnimatedSection>
         </div>
@@ -65,38 +65,22 @@ const Contact = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">Your Name *</label>
-                    <Input
-                      id="name" name="name" type="text" value={formData.name} onChange={handleChange}
-                      placeholder="John Doe" required
-                      className="h-12 rounded-xl bg-white/50 border-border/50 focus:bg-white transition-colors"
-                    />
+                    <Input id="name" name="name" type="text" value={formData.name} onChange={handleChange} placeholder="John Doe" required className="h-12 rounded-xl bg-white/50 border-border/50 focus:bg-white transition-colors" />
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">Email Address *</label>
-                    <Input
-                      id="email" name="email" type="email" value={formData.email} onChange={handleChange}
-                      placeholder="john@example.com" required
-                      className="h-12 rounded-xl bg-white/50 border-border/50 focus:bg-white transition-colors"
-                    />
+                    <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} placeholder="john@example.com" required className="h-12 rounded-xl bg-white/50 border-border/50 focus:bg-white transition-colors" />
                   </div>
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">Phone Number</label>
-                    <Input
-                      id="phone" name="phone" type="tel" value={formData.phone} onChange={handleChange}
-                      placeholder="+1 (234) 567-890"
-                      className="h-12 rounded-xl bg-white/50 border-border/50 focus:bg-white transition-colors"
-                    />
+                    <Input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleChange} placeholder="+92 0370-8099033" className="h-12 rounded-xl bg-white/50 border-border/50 focus:bg-white transition-colors" />
                   </div>
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">Your Message (Optional)</label>
-                    <Textarea
-                      id="message" name="message" value={formData.message} onChange={handleChange}
-                      placeholder="Tell us about your project..." rows={5}
-                      className="rounded-xl bg-white/50 border-border/50 focus:bg-white transition-colors"
-                    />
+                    <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">Tell us about your project</label>
+                    <Textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Describe your business and what kind of website you need..." rows={5} className="rounded-xl bg-white/50 border-border/50 focus:bg-white transition-colors" />
                   </div>
                   <Button type="submit" variant="default" size="lg" className="w-full gap-2 h-13" disabled={isSubmitting}>
-                    {isSubmitting ? "Sending..." : (<>Send Message <Send size={18} /></>)}
+                    {isSubmitting ? "Sending..." : (<>Book Strategy Call <Send size={18} /></>)}
                   </Button>
                 </form>
               </div>
@@ -132,24 +116,19 @@ const Contact = () => {
                 ))}
               </div>
 
-              {/* Quick Contact */}
               <div className="space-y-4">
                 <h3 className="font-display font-semibold text-foreground">Quick Contact</h3>
                 <div className="grid grid-cols-2 gap-4">
-                  <a href="https://wa.me/923708099033" target="_blank" rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 bg-[hsl(142,70%,45%)] text-white rounded-2xl py-4 px-6 font-medium hover:opacity-90 hover:-translate-y-1 transition-all duration-300">
+                  <a href="https://wa.me/923708099033" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 bg-[hsl(142,70%,45%)] text-white rounded-2xl py-4 px-6 font-medium hover:opacity-90 hover:-translate-y-1 transition-all duration-300">
                     <MessageCircle size={20} /> WhatsApp
                   </a>
-                  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 bg-primary text-primary-foreground rounded-2xl py-4 px-6 font-medium hover:opacity-90 hover:-translate-y-1 transition-all duration-300">
+                  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 bg-primary text-primary-foreground rounded-2xl py-4 px-6 font-medium hover:opacity-90 hover:-translate-y-1 transition-all duration-300">
                     <Facebook size={20} /> Facebook
                   </a>
-                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 bg-[hsl(330,80%,55%)] text-white rounded-2xl py-4 px-6 font-medium hover:opacity-90 hover:-translate-y-1 transition-all duration-300">
+                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 bg-[hsl(330,80%,55%)] text-white rounded-2xl py-4 px-6 font-medium hover:opacity-90 hover:-translate-y-1 transition-all duration-300">
                     <Instagram size={20} /> Instagram
                   </a>
-                  <a href="mailto:bilalhaidermuhammad6@gmail.com"
-                    className="flex items-center justify-center gap-2 bg-foreground text-background rounded-2xl py-4 px-6 font-medium hover:opacity-90 hover:-translate-y-1 transition-all duration-300">
+                  <a href="mailto:bilalhaidermuhammad6@gmail.com" className="flex items-center justify-center gap-2 bg-foreground text-background rounded-2xl py-4 px-6 font-medium hover:opacity-90 hover:-translate-y-1 transition-all duration-300">
                     <Mail size={20} /> Email
                   </a>
                 </div>
@@ -168,10 +147,10 @@ const Contact = () => {
             </h2>
             <div className="space-y-4">
               {[
-                { q: "How long does it take to build a website?", a: "Most projects are completed within 2-4 weeks, depending on the complexity and scope. We'll provide a detailed timeline during our initial consultation." },
-                { q: "What's included in your website packages?", a: "Our packages include custom design, development, mobile responsiveness, basic SEO, domain setup assistance, and launch support. We also offer ongoing maintenance plans." },
-                { q: "Do you offer ongoing support?", a: "Yes! We provide 24/7 support for all our clients. We also offer maintenance packages to keep your website updated and secure." },
-                { q: "Can you help with domain and hosting?", a: "Absolutely! We assist with domain registration and set up reliable hosting so your website is always fast and accessible." },
+                { q: "How long does it take to build a website?", a: "Most projects are completed within 2-4 weeks, depending on the complexity and scope. We'll provide a detailed timeline during our strategy call." },
+                { q: "What's included in your website packages?", a: "Every project includes custom design, development, mobile optimization, speed optimization, SEO-friendly structure, conversion strategy, and launch support." },
+                { q: "Do you offer ongoing support?", a: "Yes! We provide 24/7 support for all our clients. We also offer maintenance packages to keep your website updated, secure, and performing at its best." },
+                { q: "Who is this for?", a: "We work with serious businesses — startups, ecommerce brands, exporters, service companies, and agencies who want a premium website that drives real results." },
               ].map((faq, index) => (
                 <AnimatedSection key={index} delay={index * 80}>
                   <div className="bg-card rounded-2xl p-7 shadow-card border border-border/50 hover:shadow-xl transition-all duration-300">
