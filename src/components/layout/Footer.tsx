@@ -1,7 +1,31 @@
 import { Link } from "react-router-dom";
-import { Facebook, Instagram, Mail, Phone, MapPin, ArrowRight } from "lucide-react";
+import { Facebook, Instagram, Mail, Phone, MapPin, ArrowRight, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 import logo from "@/assets/logo.png";
+
+const footerLinks = [
+  { name: "Home", path: "/" },
+  { name: "Services", path: "/services" },
+  { name: "About", path: "/about" },
+  { name: "Portfolio", path: "/portfolio" },
+  { name: "Reviews", path: "/reviews" },
+  { name: "Contact", path: "/contact" },
+];
+
+const services = [
+  "Corporate Websites",
+  "Export Company Websites",
+  "Ecommerce Websites",
+  "Personal Brand Websites",
+  "Landing Pages",
+];
+
+const socials = [
+  { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
+  { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
+  { icon: Mail, href: "mailto:bilalhaidermuhammad6@gmail.com", label: "Email" },
+];
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,26 +33,38 @@ const Footer = () => {
   return (
     <footer className="relative overflow-hidden">
       {/* CTA Section */}
-      <div className="bg-gradient-to-b from-background to-muted/50">
-        <div className="container-custom py-16">
-          <div className="relative rounded-3xl p-10 md:p-14 text-center overflow-hidden" style={{ background: "var(--gradient-primary)" }}>
-            <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
-            <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
+      <div className="bg-gradient-to-b from-background via-background to-foreground">
+        <div className="container-custom py-20">
+          <div className="relative rounded-[2rem] p-10 md:p-16 text-center overflow-hidden" style={{ background: "var(--gradient-primary)" }}>
+            {/* Decorative elements */}
+            <div className="absolute top-0 right-0 w-80 h-80 bg-white/[0.04] rounded-full -translate-y-1/2 translate-x-1/2" />
+            <div className="absolute bottom-0 left-0 w-60 h-60 bg-white/[0.04] rounded-full translate-y-1/2 -translate-x-1/2" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/[0.02] rounded-full" />
+            <div className="absolute inset-0 opacity-[0.06]" style={{
+              backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)",
+              backgroundSize: "24px 24px"
+            }} />
+
             <div className="relative z-10 text-primary-foreground">
-              <h2 className="text-2xl md:text-4xl font-display font-bold mb-4">
-                Ready to Upgrade Your Online Presence?
+              <span className="inline-block text-xs font-semibold tracking-[0.2em] uppercase text-primary-foreground/60 mb-5">
+                Ready to start?
+              </span>
+              <h2 className="text-2xl sm:text-3xl md:text-5xl font-display font-bold mb-4 leading-tight">
+                Ready to Upgrade Your
+                <br className="hidden sm:block" />
+                Online Presence?
               </h2>
-              <p className="text-primary-foreground/90 mb-8 max-w-2xl mx-auto text-lg">
+              <p className="text-primary-foreground/70 mb-10 max-w-2xl mx-auto text-base md:text-lg">
                 Let's build a website that makes your competitors nervous.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/contact">
-                  <Button variant="secondary" size="lg" className="gap-2 font-bold">
+              <div className="flex flex-col sm:flex-row gap-3 justify-center px-2">
+                <Link to="/contact" className="w-full sm:w-auto">
+                  <Button variant="secondary" size="lg" className="gap-2 font-bold w-full sm:w-auto text-sm sm:text-base shadow-lg hover:shadow-xl">
                     Book Your Strategy Call <ArrowRight size={18} />
                   </Button>
                 </Link>
-                <a href="https://wa.me/923708099033" target="_blank" rel="noopener noreferrer">
-                  <Button variant="outline" size="lg" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground font-bold">
+                <a href="https://wa.me/923708099033" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                  <Button variant="outline" size="lg" className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground font-bold w-full sm:w-auto text-sm sm:text-base">
                     WhatsApp Us
                   </Button>
                 </a>
@@ -39,28 +75,35 @@ const Footer = () => {
       </div>
 
       {/* Main Footer */}
-      <div className="bg-[hsl(215_25%_10%)]">
-        <div className="container-custom pt-14 pb-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
-            {/* Brand */}
-            <div className="space-y-5">
-              <Link to="/" className="flex flex-col items-start gap-1">
-                <img src={logo} alt="BQ Solutions Logo" className="w-18 h-18 object-contain" />
-                <span className="text-xs font-display font-semibold text-white/60">
-                  BQ <span className="text-[hsl(199_89%_48%)]">Solutions</span>
-                </span>
+      <div className="bg-foreground">
+        <div className="container-custom pt-16 pb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
+            {/* Brand — takes more space */}
+            <div className="lg:col-span-4 space-y-6">
+              <Link to="/" className="inline-flex items-center gap-2.5">
+                <img src={logo} alt="BQ Solutions Logo" className="w-16 h-16 object-contain" />
+                <div className="flex flex-col">
+                  <span className="text-base font-display font-bold text-background leading-tight">
+                    BQ <span className="text-primary">Solutions</span>
+                  </span>
+                  <span className="text-[9px] text-background/30 font-medium tracking-[0.15em] uppercase">
+                    Premium Web Agency
+                  </span>
+                </div>
               </Link>
-              <p className="text-white/50 text-sm leading-relaxed">
-                Premium website design & development agency. We build high-converting websites that dominate industries.
+              <p className="text-background/40 text-sm leading-relaxed max-w-xs">
+                We build premium, conversion-driven websites that position your business as an authority in your industry.
               </p>
-              <div className="flex gap-3">
-                {[
-                  { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
-                  { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
-                  { icon: Mail, href: "mailto:bilalhaidermuhammad6@gmail.com", label: "Email" },
-                ].map((social) => (
-                  <a key={social.href} href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label}
-                    className="w-9 h-9 rounded-lg bg-white/[0.06] hover:bg-[hsl(199_89%_48%)] transition-all duration-300 flex items-center justify-center text-white/60 hover:text-white hover:scale-105">
+              <div className="flex gap-2.5">
+                {socials.map((social) => (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.label}
+                    className="w-10 h-10 rounded-xl bg-background/[0.06] hover:bg-primary transition-all duration-300 flex items-center justify-center text-background/40 hover:text-primary-foreground hover:scale-105 border border-background/[0.06] hover:border-primary"
+                  >
                     <social.icon size={16} />
                   </a>
                 ))}
@@ -68,15 +111,19 @@ const Footer = () => {
             </div>
 
             {/* Quick Links */}
-            <div>
-              <h4 className="font-display font-semibold text-sm uppercase tracking-wider text-white/80 mb-5">Quick Links</h4>
-              <ul className="space-y-2.5">
-                {["Home", "Services", "About", "Portfolio", "Reviews", "Contact"].map((link) => (
-                  <li key={link}>
-                    <Link to={link === "Home" ? "/" : `/${link.toLowerCase()}`}
-                      className="text-white/45 hover:text-[hsl(199_89%_48%)] transition-colors text-sm inline-flex items-center gap-1.5 group">
-                      <span className="w-0 group-hover:w-2 h-px bg-[hsl(199_89%_48%)] transition-all duration-300" />
-                      {link}
+            <div className="lg:col-span-2">
+              <h4 className="text-xs font-semibold uppercase tracking-[0.15em] text-background/50 mb-5">
+                Navigate
+              </h4>
+              <ul className="space-y-2">
+                {footerLinks.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      to={link.path}
+                      className="text-background/35 hover:text-primary transition-all duration-300 text-sm inline-flex items-center gap-1.5 group"
+                    >
+                      <span className="w-0 group-hover:w-3 h-px bg-primary transition-all duration-300" />
+                      {link.name}
                     </Link>
                   </li>
                 ))}
@@ -84,13 +131,18 @@ const Footer = () => {
             </div>
 
             {/* Services */}
-            <div>
-              <h4 className="font-display font-semibold text-sm uppercase tracking-wider text-white/80 mb-5">We Build</h4>
-              <ul className="space-y-2.5">
-                {["Corporate Websites", "Export Company Websites", "Ecommerce Websites", "Personal Brand Websites", "Landing Pages"].map((service) => (
+            <div className="lg:col-span-3">
+              <h4 className="text-xs font-semibold uppercase tracking-[0.15em] text-background/50 mb-5">
+                We Build
+              </h4>
+              <ul className="space-y-2">
+                {services.map((service) => (
                   <li key={service}>
-                    <Link to="/services" className="text-white/45 hover:text-[hsl(199_89%_48%)] transition-colors text-sm inline-flex items-center gap-1.5 group">
-                      <span className="w-0 group-hover:w-2 h-px bg-[hsl(199_89%_48%)] transition-all duration-300" />
+                    <Link
+                      to="/services"
+                      className="text-background/35 hover:text-primary transition-all duration-300 text-sm inline-flex items-center gap-1.5 group"
+                    >
+                      <span className="w-0 group-hover:w-3 h-px bg-primary transition-all duration-300" />
                       {service}
                     </Link>
                   </li>
@@ -99,34 +151,49 @@ const Footer = () => {
             </div>
 
             {/* Contact */}
-            <div>
-              <h4 className="font-display font-semibold text-sm uppercase tracking-wider text-white/80 mb-5">Get in Touch</h4>
+            <div className="lg:col-span-3">
+              <h4 className="text-xs font-semibold uppercase tracking-[0.15em] text-background/50 mb-5">
+                Get in Touch
+              </h4>
               <ul className="space-y-4">
                 <li>
-                  <a href="mailto:bilalhaidermuhammad6@gmail.com" className="flex items-start gap-3 text-white/45 hover:text-white/70 transition-colors group">
-                    <Mail size={16} className="text-[hsl(199_89%_48%)] mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">bilalhaidermuhammad6@gmail.com</span>
+                  <a href="mailto:bilalhaidermuhammad6@gmail.com" className="flex items-start gap-3 text-background/35 hover:text-background/60 transition-colors group">
+                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
+                      <Mail size={14} className="text-primary" />
+                    </div>
+                    <span className="text-sm pt-1.5">bilalhaidermuhammad6<br />@gmail.com</span>
                   </a>
                 </li>
                 <li>
-                  <a href="tel:+9203708099033" className="flex items-start gap-3 text-white/45 hover:text-white/70 transition-colors group">
-                    <Phone size={16} className="text-[hsl(199_89%_48%)] mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">+92 0370-8099033</span>
+                  <a href="tel:+9203708099033" className="flex items-start gap-3 text-background/35 hover:text-background/60 transition-colors group">
+                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
+                      <Phone size={14} className="text-primary" />
+                    </div>
+                    <span className="text-sm pt-1.5">+92 0370-8099033</span>
                   </a>
                 </li>
-                <li className="flex items-start gap-3 text-white/45">
-                  <MapPin size={16} className="text-[hsl(199_89%_48%)] mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">B-245 Block 13, F.B Area, Karachi</span>
+                <li className="flex items-start gap-3 text-background/35">
+                  <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <MapPin size={14} className="text-primary" />
+                  </div>
+                  <span className="text-sm pt-1.5">B-245 Block 13, F.B Area,<br />Karachi, Pakistan</span>
                 </li>
               </ul>
             </div>
           </div>
 
-          <div className="border-t border-white/[0.06] mt-10 pt-6 flex flex-col md:flex-row justify-between items-center gap-3">
-            <p className="text-white/30 text-xs">© {currentYear} BQ Solutions. All rights reserved.</p>
-            <div className="flex gap-5">
-              <Link to="/privacy" className="text-white/30 hover:text-white/50 transition-colors text-xs">Privacy Policy</Link>
-              <Link to="/terms" className="text-white/30 hover:text-white/50 transition-colors text-xs">Terms of Service</Link>
+          {/* Bottom Bar */}
+          <div className="border-t border-background/[0.06] mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-background/20 text-xs">
+              © {currentYear} BQ Solutions. Crafted with precision.
+            </p>
+            <div className="flex gap-6">
+              <Link to="/privacy" className="text-background/20 hover:text-background/40 transition-colors text-xs">
+                Privacy Policy
+              </Link>
+              <Link to="/terms" className="text-background/20 hover:text-background/40 transition-colors text-xs">
+                Terms of Service
+              </Link>
             </div>
           </div>
         </div>
