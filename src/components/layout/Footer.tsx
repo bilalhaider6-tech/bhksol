@@ -50,7 +50,7 @@ const Footer = () => {
                 Ready to start?
               </span>
               <h2 className="text-2xl sm:text-3xl md:text-5xl font-display font-bold mb-4 leading-tight">
-                Ready to Upgrade Your
+                Ready to Upgrade Your{" "}
                 <br className="hidden sm:block" />
                 Online Presence?
               </h2>
