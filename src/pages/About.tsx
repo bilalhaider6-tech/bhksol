@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logo from "@/assets/logo.png";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -57,9 +58,7 @@ const About = () => {
               <div className="relative">
                 <div className="aspect-square rounded-3xl bg-primary/5 flex items-center justify-center overflow-hidden border border-primary/10">
                   <div className="text-center p-8">
-                    <div className="w-24 h-24 rounded-2xl bg-primary text-primary-foreground flex items-center justify-center mx-auto mb-5 shadow-glow">
-                      <span className="text-4xl font-display font-bold">BQ</span>
-                    </div>
+                    <img src={logo} alt="BQ Solutions Logo" className="w-32 h-32 object-contain mx-auto mb-5" />
                     <h3 className="text-2xl font-display font-bold text-foreground mb-2">BQ Solutions</h3>
                     <p className="text-muted-foreground text-sm">Building Digital Success</p>
                   </div>
