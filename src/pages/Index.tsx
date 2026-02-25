@@ -82,14 +82,14 @@ const Index = () => {
             </AnimatedSection>
 
             <AnimatedSection delay={400}>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/contact">
-                  <Button variant="hero" size="xl" className="gap-2 shadow-glow">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center px-2">
+                <Link to="/contact" className="w-full sm:w-auto">
+                  <Button variant="hero" size="xl" className="gap-2 shadow-glow w-full sm:w-auto text-sm sm:text-base px-5 sm:px-8">
                     Book Your Free Strategy Call <ArrowRight size={20} />
                   </Button>
                 </Link>
-                <Link to="/portfolio">
-                  <Button variant="heroOutline" size="xl" className="gap-2">
+                <Link to="/portfolio" className="w-full sm:w-auto">
+                  <Button variant="heroOutline" size="xl" className="gap-2 w-full sm:w-auto text-sm sm:text-base px-5 sm:px-8">
                     View Our Work
                   </Button>
                 </Link>
@@ -303,17 +303,17 @@ const Index = () => {
                 <p className="text-primary-foreground/90 max-w-2xl mx-auto mb-10 text-lg">
                   If you're serious about growing your business, let's build a website that reflects your true potential.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link to="/contact">
-                    <Button variant="secondary" size="xl" className="gap-2 font-bold">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center px-2">
+                  <Link to="/contact" className="w-full sm:w-auto">
+                    <Button variant="secondary" size="xl" className="gap-2 font-bold w-full sm:w-auto text-sm sm:text-base px-5 sm:px-8">
                       Schedule Your Free Strategy Call <ArrowRight size={20} />
                     </Button>
                   </Link>
-                  <a href="https://wa.me/923708099033" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/923708099033" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                     <Button
                       variant="outline"
                       size="xl"
-                      className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground font-bold"
+                      className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground font-bold w-full sm:w-auto text-sm sm:text-base px-5 sm:px-8"
                     >
                       WhatsApp Us
                     </Button>
