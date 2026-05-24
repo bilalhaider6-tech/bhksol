@@ -126,9 +126,6 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
-          </div>
-        </div>
-      </section>
 
       {/* More Coming */}
       <section className="section-padding bg-secondary/30 wave-divider-top">
