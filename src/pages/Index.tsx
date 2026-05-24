@@ -262,33 +262,8 @@ const Index = () => {
               </p>
             </AnimatedSection>
 
-            <div className="grid md:grid-cols-2 gap-12 items-start">
-              <AnimatedSection direction="left">
-                <motion.div
-                  className="bg-destructive/5 border border-destructive/10 rounded-2xl p-8"
-                  whileHover={{ scale: 1.02, boxShadow: "0 20px 40px -12px rgba(0,0,0,0.1)" }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <h3 className="text-lg font-display font-bold text-foreground mb-5">We do NOT offer:</h3>
-                  <ul className="space-y-3">
-                    {["Social media management", "SEO packages", "Content marketing", "Random digital services"].map((item, i) => (
-                      <motion.li
-                        key={item}
-                        className="flex items-center gap-3 text-muted-foreground"
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: i * 0.1, duration: 0.4 }}
-                      >
-                        <span className="w-5 h-5 rounded-full bg-destructive/10 text-destructive flex items-center justify-center text-xs font-bold">✕</span>
-                        {item}
-                      </motion.li>
-                    ))}
-                  </ul>
-                </motion.div>
-              </AnimatedSection>
-
-              <AnimatedSection direction="right">
+            <div className="max-w-2xl mx-auto">
+              <AnimatedSection direction="up">
                 <motion.div
                   className="bg-primary/5 border border-primary/10 rounded-2xl p-8"
                   whileHover={{ scale: 1.02, boxShadow: "0 20px 40px -12px hsl(199 89% 48% / 0.15)" }}
