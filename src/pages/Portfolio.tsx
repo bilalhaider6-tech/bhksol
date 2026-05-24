@@ -7,6 +7,8 @@ import safiaRiceImg from "@/assets/portfolio-safia-rice.png";
 import temlaRiceImg from "@/assets/portfolio-temla-rice.png";
 import falakRiceImg from "@/assets/portfolio-falak-rice.png";
 
+const thumb = (url: string) => `https://image.thum.io/get/width/1200/crop/800/noanimate/${url}`;
+
 const projects = [
   {
     id: 1, title: "Safia Rice Mills", category: "Rice Export Business",
@@ -25,6 +27,42 @@ const projects = [
     description: "A full-featured e-commerce platform for one of Pakistan's leading rice and food brands with seamless shopping experience.",
     features: ["Online Store", "Product Catalog", "Conversion Focused"],
     image: falakRiceImg, url: "https://estore.falakrice.com",
+  },
+  {
+    id: 4, title: "Benjamin Franklin Plumbing", category: "Plumbing",
+    description: "High-converting service site for a nationally trusted plumbing brand — built around bookings, trust signals, and fast local response.",
+    features: ["Lead Generation", "Service Pages", "Trust Focused"],
+    image: thumb("https://www.benjaminfranklinplumbing.com/"), url: "https://www.benjaminfranklinplumbing.com/",
+  },
+  {
+    id: 5, title: "Roto-Rooter", category: "Plumbing",
+    description: "A heavyweight plumbing & drain services experience — instant quotes, emergency CTAs, and a streamlined nationwide booking flow.",
+    features: ["Emergency CTA", "Online Booking", "Nationwide Reach"],
+    image: thumb("https://www.rotorooter.com/"), url: "https://www.rotorooter.com/",
+  },
+  {
+    id: 6, title: "WOW 1 DAY PAINTING", category: "Painting",
+    description: "A bold, conversion-first painting brand site with strong promise-driven messaging, quote forms, and crisp visual storytelling.",
+    features: ["Quote Funnel", "Brand Storytelling", "Service Showcase"],
+    image: thumb("https://www.wow1day.com/"), url: "https://www.wow1day.com/",
+  },
+  {
+    id: 7, title: "SOHO Painters", category: "Painting",
+    description: "A premium, editorial-style painting studio site — refined typography, project galleries, and a high-end residential feel.",
+    features: ["Editorial Design", "Project Gallery", "Premium Feel"],
+    image: thumb("https://sohopainters.com/"), url: "https://sohopainters.com/",
+  },
+  {
+    id: 8, title: "Oak & Iron Carpentry", category: "Carpentry",
+    description: "A craftsman-grade carpentry website that highlights bespoke woodwork with rich imagery, clean layouts, and clear inquiry paths.",
+    features: ["Craft Showcase", "Portfolio Grid", "Inquiry Focused"],
+    image: thumb("https://www.oak-iron-carpentry.com/"), url: "https://www.oak-iron-carpentry.com/",
+  },
+  {
+    id: 9, title: "Heritage Woodworks", category: "Carpentry",
+    description: "A heritage-inspired woodworking site blending warm visuals, story-driven content, and a refined showcase of fine carpentry work.",
+    features: ["Storytelling", "Visual Showcase", "Premium Brand"],
+    image: thumb("https://heritage-woodworks.com/"), url: "https://heritage-woodworks.com/",
   },
 ];
 
@@ -69,11 +107,18 @@ const Portfolio = () => {
                     <div className="text-xs font-semibold text-primary mb-2 uppercase tracking-wider">{project.category}</div>
                     <h3 className="text-xl font-display font-bold text-foreground mb-3 group-hover:text-primary transition-colors">{project.title}</h3>
                     <p className="text-muted-foreground text-sm mb-4 leading-relaxed">{project.description}</p>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2 mb-5">
                       {project.features.map((feature) => (
                         <span key={feature} className="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full font-medium">{feature}</span>
                       ))}
                     </div>
+                    {project.url && (
+                      <a href={project.url} target="_blank" rel="noopener noreferrer" className="inline-flex">
+                        <Button variant="default" size="sm" className="gap-2">
+                          Visit Website <ExternalLink size={14} />
+                        </Button>
+                      </a>
+                    )}
                   </div>
                 </div>
               </AnimatedSection>
