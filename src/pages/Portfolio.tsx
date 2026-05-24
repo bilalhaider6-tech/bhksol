@@ -11,58 +11,58 @@ const thumb = (url: string) => `https://image.thum.io/get/width/1200/crop/800/no
 
 const projects = [
   {
-    id: 1, title: "Safia Rice Mills", category: "Rice Export Business",
-    description: "A professional, conversion-focused website for a premium Pakistani rice exporter — showcasing products, processes, and 28+ years of excellence.",
-    features: ["Custom Design", "Responsive", "SEO Optimized"],
-    image: safiaRiceImg, url: "https://safiaricemills.lovable.app",
-  },
-  {
-    id: 2, title: "Temla Rice", category: "Rice Brand & E-commerce",
+    id: 1, title: "Temla Rice", category: "Rice Brand & E-commerce",
     description: "A vibrant, modern website for Pakistan's longest rice grain brand with product catalog, recipes, and e-commerce functionality.",
     features: ["E-commerce", "Product Catalog", "Brand Identity"],
     image: temlaRiceImg, url: "https://temlarice.com",
   },
   {
-    id: 3, title: "Falak Rice E-Store", category: "E-commerce Store",
-    description: "A full-featured e-commerce platform for one of Pakistan's leading rice and food brands with seamless shopping experience.",
-    features: ["Online Store", "Product Catalog", "Conversion Focused"],
-    image: falakRiceImg, url: "https://estore.falakrice.com",
-  },
-  {
-    id: 4, title: "Benjamin Franklin Plumbing", category: "Plumbing",
+    id: 2, title: "Benjamin Franklin Plumbing", category: "Plumbing",
     description: "High-converting service site for a nationally trusted plumbing brand — built around bookings, trust signals, and fast local response.",
     features: ["Lead Generation", "Service Pages", "Trust Focused"],
     image: thumb("https://www.benjaminfranklinplumbing.com/"), url: "https://www.benjaminfranklinplumbing.com/",
   },
   {
-    id: 5, title: "Roto-Rooter", category: "Plumbing",
+    id: 3, title: "Roto-Rooter", category: "Plumbing",
     description: "A heavyweight plumbing & drain services experience — instant quotes, emergency CTAs, and a streamlined nationwide booking flow.",
     features: ["Emergency CTA", "Online Booking", "Nationwide Reach"],
     image: thumb("https://www.rotorooter.com/"), url: "https://www.rotorooter.com/",
   },
   {
-    id: 6, title: "WOW 1 DAY PAINTING", category: "Painting",
+    id: 4, title: "WOW 1 DAY PAINTING", category: "Painting",
     description: "A bold, conversion-first painting brand site with strong promise-driven messaging, quote forms, and crisp visual storytelling.",
     features: ["Quote Funnel", "Brand Storytelling", "Service Showcase"],
     image: thumb("https://www.wow1day.com/"), url: "https://www.wow1day.com/",
   },
   {
-    id: 7, title: "SOHO Painters", category: "Painting",
+    id: 5, title: "SOHO Painters", category: "Painting",
     description: "A premium, editorial-style painting studio site — refined typography, project galleries, and a high-end residential feel.",
     features: ["Editorial Design", "Project Gallery", "Premium Feel"],
     image: thumb("https://sohopainters.com/"), url: "https://sohopainters.com/",
   },
   {
-    id: 8, title: "Oak & Iron Carpentry", category: "Carpentry",
+    id: 6, title: "Oak & Iron Carpentry", category: "Carpentry",
     description: "A craftsman-grade carpentry website that highlights bespoke woodwork with rich imagery, clean layouts, and clear inquiry paths.",
     features: ["Craft Showcase", "Portfolio Grid", "Inquiry Focused"],
     image: thumb("https://www.oak-iron-carpentry.com/"), url: "https://www.oak-iron-carpentry.com/",
   },
   {
-    id: 9, title: "Heritage Woodworks", category: "Carpentry",
+    id: 7, title: "Heritage Woodworks", category: "Carpentry",
     description: "A heritage-inspired woodworking site blending warm visuals, story-driven content, and a refined showcase of fine carpentry work.",
     features: ["Storytelling", "Visual Showcase", "Premium Brand"],
     image: thumb("https://heritage-woodworks.com/"), url: "https://heritage-woodworks.com/",
+  },
+  {
+    id: 8, title: "Safia Rice Mills", category: "Rice Export Business",
+    description: "A professional, conversion-focused website for a premium Pakistani rice exporter — showcasing products, processes, and 28+ years of excellence.",
+    features: ["Custom Design", "Responsive", "SEO Optimized"],
+    image: safiaRiceImg, url: "https://safiaricemills.lovable.app",
+  },
+  {
+    id: 9, title: "Falak Rice E-Store", category: "E-commerce Store",
+    description: "A full-featured e-commerce platform for one of Pakistan's leading rice and food brands with seamless shopping experience.",
+    features: ["Online Store", "Product Catalog", "Conversion Focused"],
+    image: falakRiceImg, url: "https://estore.falakrice.com",
   },
 ];
 
