@@ -107,15 +107,25 @@ const Portfolio = () => {
                     <div className="text-xs font-semibold text-primary mb-2 uppercase tracking-wider">{project.category}</div>
                     <h3 className="text-xl font-display font-bold text-foreground mb-3 group-hover:text-primary transition-colors">{project.title}</h3>
                     <p className="text-muted-foreground text-sm mb-4 leading-relaxed">{project.description}</p>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2 mb-5">
                       {project.features.map((feature) => (
                         <span key={feature} className="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full font-medium">{feature}</span>
                       ))}
                     </div>
+                    {project.url && (
+                      <a href={project.url} target="_blank" rel="noopener noreferrer" className="inline-flex">
+                        <Button variant="default" size="sm" className="gap-2">
+                          Visit Website <ExternalLink size={14} />
+                        </Button>
+                      </a>
+                    )}
                   </div>
                 </div>
               </AnimatedSection>
             ))}
+          </div>
+        </div>
+      </section>
           </div>
         </div>
       </section>
