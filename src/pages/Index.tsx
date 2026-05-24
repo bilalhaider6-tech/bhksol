@@ -23,6 +23,8 @@ import safiaRiceImg from "@/assets/portfolio-safia-rice.png";
 import temlaRiceImg from "@/assets/portfolio-temla-rice.png";
 import falakRiceImg from "@/assets/portfolio-falak-rice.png";
 
+const thumb = (url: string) => `https://image.thum.io/get/width/1200/crop/800/noanimate/${url}`;
+
 const processSteps = [
   { icon: Target, step: "01", title: "Strategy & Research", description: "We analyze your market, competitors, and goals to craft a winning strategy." },
   { icon: Layers, step: "02", title: "Wireframe & UX Planning", description: "We map out user flows and structure for maximum conversions." },
@@ -40,6 +42,8 @@ const whyUs = [
 
 const portfolioItems = [
   { title: "Temla Rice", category: "Rice Brand & E-commerce", image: temlaRiceImg, url: "https://temlarice.com" },
+  { title: "Oak & Iron Carpentry", category: "Carpentry", image: thumb("https://www.oak-iron-carpentry.com/"), url: "https://www.oak-iron-carpentry.com/" },
+  { title: "Heritage Woodworks", category: "Carpentry", image: thumb("https://heritage-woodworks.com/"), url: "https://heritage-woodworks.com/" },
   { title: "Safia Rice Mills", category: "Rice Export Business", image: safiaRiceImg, url: "https://safiaricemills.lovable.app" },
   { title: "Falak Rice E-Store", category: "E-commerce Store", image: falakRiceImg, url: "https://estore.falakrice.com" },
 ];
