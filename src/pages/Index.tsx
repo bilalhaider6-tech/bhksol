@@ -44,6 +44,10 @@ const portfolioItems = [
   { title: "Temla Rice", category: "Rice Brand & E-commerce", image: temlaRiceImg, url: "https://temlarice.com" },
   { title: "Oak & Iron Carpentry", category: "Carpentry", image: thumb("https://www.oak-iron-carpentry.com/"), url: "https://www.oak-iron-carpentry.com/" },
   { title: "Heritage Woodworks", category: "Carpentry", image: thumb("https://heritage-woodworks.com/"), url: "https://heritage-woodworks.com/" },
+  { title: "Benjamin Franklin Plumbing", category: "Plumbing", image: thumb("https://www.benjaminfranklinplumbing.com/"), url: "https://www.benjaminfranklinplumbing.com/" },
+  { title: "Roto-Rooter", category: "Plumbing", image: thumb("https://www.rotorooter.com/"), url: "https://www.rotorooter.com/" },
+  { title: "WOW 1 DAY PAINTING", category: "Painting", image: thumb("https://www.wow1day.com/"), url: "https://www.wow1day.com/" },
+  { title: "SOHO Painters", category: "Painting", image: thumb("https://sohopainters.com/"), url: "https://sohopainters.com/" },
   { title: "Safia Rice Mills", category: "Rice Export Business", image: safiaRiceImg, url: "https://safiaricemills.lovable.app" },
   { title: "Falak Rice E-Store", category: "E-commerce Store", image: falakRiceImg, url: "https://estore.falakrice.com" },
 ];
