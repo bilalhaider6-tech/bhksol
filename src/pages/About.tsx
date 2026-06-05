@@ -190,11 +190,19 @@ const About = () => {
                 <p className="text-primary-foreground/90 mb-10 max-w-xl mx-auto text-lg">
                   Let's build a website that positions your business as the authority in your industry.
                 </p>
-                <Link to="/contact">
-                  <Button variant="secondary" size="lg" className="gap-2 font-bold">
-                    Book Your Strategy Call <ArrowRight size={18} />
-                  </Button>
-                </Link>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link to="/contact">
+                    <Button variant="secondary" size="lg" className="gap-2 font-bold">
+                      Book Your Strategy Call <ArrowRight size={18} />
+                    </Button>
+                  </Link>
+                  <Link to="/portfolio">
+                    <Button variant="outline" size="lg" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground font-bold">
+                      Explore Our Work
+                    </Button>
+                  </Link>
+                </div>
+
               </div>
             </div>
           </AnimatedSection>
