@@ -26,11 +26,12 @@ import falakRiceImg from "@/assets/portfolio-falak-rice.png";
 const thumb = (url: string) => `https://image.thum.io/get/width/1200/crop/800/noanimate/${url}`;
 
 const processSteps = [
-  { icon: Target, step: "01", title: "Strategy & Research", description: "We analyze your market, competitors, and goals to craft a winning strategy." },
-  { icon: Layers, step: "02", title: "Wireframe & UX Planning", description: "We map out user flows and structure for maximum conversions." },
-  { icon: Paintbrush, step: "03", title: "Premium UI Design", description: "Pixel-perfect designs that reflect your brand's authority and quality." },
-  { icon: Rocket, step: "04", title: "Development & Launch", description: "Clean code, speed optimization, and a flawless launch." },
+  { icon: Target, step: "01", title: "Strategy & Research", duration: "Week 1", description: "We deep-dive into your market, audience, and competitors to define a clear strategy that wins clients — not just clicks." },
+  { icon: Layers, step: "02", title: "Wireframe & UX Planning", duration: "Week 1–2", description: "We map every user journey and conversion path so your site guides visitors toward action with zero friction." },
+  { icon: Paintbrush, step: "03", title: "Premium UI Design", duration: "Week 2–3", description: "Pixel-perfect, brand-aligned designs that signal authority and make competitors look ordinary." },
+  { icon: Rocket, step: "04", title: "Development & Launch", duration: "Week 3–4", description: "Clean code, speed and SEO optimization, QA across devices, and a flawless launch — built to grow with you." },
 ];
+
 
 const whyUs = [
   { icon: Monitor, text: "Modern & international-standard design" },
@@ -41,16 +42,17 @@ const whyUs = [
 ];
 
 const portfolioItems = [
-  { title: "Temla Rice", category: "Rice Brand & E-commerce", image: temlaRiceImg, url: "https://temlarice.com" },
-  { title: "Oak & Iron Carpentry", category: "Carpentry", image: thumb("https://www.oak-iron-carpentry.com/"), url: "https://www.oak-iron-carpentry.com/" },
-  { title: "Heritage Woodworks", category: "Carpentry", image: thumb("https://heritage-woodworks.com/"), url: "https://heritage-woodworks.com/" },
-  { title: "Benjamin Franklin Plumbing", category: "Plumbing", image: thumb("https://www.benjaminfranklinplumbing.com/"), url: "https://www.benjaminfranklinplumbing.com/" },
-  { title: "Roto-Rooter", category: "Plumbing", image: thumb("https://www.rotorooter.com/"), url: "https://www.rotorooter.com/" },
-  { title: "WOW 1 DAY PAINTING", category: "Painting", image: thumb("https://www.wow1day.com/"), url: "https://www.wow1day.com/" },
-  { title: "SOHO Painters", category: "Painting", image: thumb("https://sohopainters.com/"), url: "https://sohopainters.com/" },
-  { title: "Safia Rice Mills", category: "Rice Export Business", image: safiaRiceImg, url: "https://safiaricemills.lovable.app" },
-  { title: "Falak Rice E-Store", category: "E-commerce Store", image: falakRiceImg, url: "https://estore.falakrice.com" },
+  { title: "Temla Rice", category: "Rice Brand & E-commerce", outcome: "Built a premium brand presence + shoppable catalog", image: temlaRiceImg, url: "https://temlarice.com" },
+  { title: "Oak & Iron Carpentry", category: "Carpentry", outcome: "Bespoke craft showcase that drives inquiries", image: thumb("https://www.oak-iron-carpentry.com/"), url: "https://www.oak-iron-carpentry.com/" },
+  { title: "Heritage Woodworks", category: "Carpentry", outcome: "Story-driven site that elevates a heritage brand", image: thumb("https://heritage-woodworks.com/"), url: "https://heritage-woodworks.com/" },
+  { title: "Benjamin Franklin Plumbing", category: "Plumbing", outcome: "Trust-first design built around fast bookings", image: thumb("https://www.benjaminfranklinplumbing.com/"), url: "https://www.benjaminfranklinplumbing.com/" },
+  { title: "Roto-Rooter", category: "Plumbing", outcome: "Streamlined nationwide booking & emergency flow", image: thumb("https://www.rotorooter.com/"), url: "https://www.rotorooter.com/" },
+  { title: "WOW 1 DAY PAINTING", category: "Painting", outcome: "Bold, promise-led brand built for conversion", image: thumb("https://www.wow1day.com/"), url: "https://www.wow1day.com/" },
+  { title: "SOHO Painters", category: "Painting", outcome: "Editorial-grade design for a premium service", image: thumb("https://sohopainters.com/"), url: "https://sohopainters.com/" },
+  { title: "Safia Rice Mills", category: "Rice Export Business", outcome: "Global-ready website for 28+ years of expertise", image: safiaRiceImg, url: "https://safiaricemills.lovable.app" },
+  { title: "Falak Rice E-Store", category: "E-commerce Store", outcome: "Full-featured store with seamless checkout", image: falakRiceImg, url: "https://estore.falakrice.com" },
 ];
+
 
 const FloatingParticle = ({ delay, x, y, size }: { delay: number; x: string; y: string; size: number }) => (
   <motion.div
@@ -121,7 +123,7 @@ const Index = () => {
                   animate={{ scale: [1, 1.5, 1], opacity: [1, 0.5, 1] }}
                   transition={{ duration: 2, repeat: Infinity }}
                 />
-                Premium Website Agency
+                Trusted by Ambitious Brands Worldwide
               </div>
             </motion.div>
 
@@ -130,8 +132,8 @@ const Index = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-foreground leading-[1.1] mb-8">
-                Premium Websites Built to{" "}
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-foreground leading-[1.05] tracking-tight mb-8">
+                Premium Websites That Turn{" "}
                 <br className="hidden md:block" />
                 <motion.span
                   className="gradient-text inline-block"
@@ -139,7 +141,7 @@ const Index = () => {
                   transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                   style={{ backgroundSize: "200% 200%" }}
                 >
-                  Dominate Your Industry
+                  Visitors Into Paying Clients
                 </motion.span>
               </h1>
             </motion.div>
@@ -150,9 +152,10 @@ const Index = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
             >
               <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed">
-                We design high-converting, modern, international-standard websites that turn visitors into customers and position your brand as the obvious choice.
+                We design and build conversion-focused websites that make your brand the obvious choice — premium design, fast load speeds, and a clear path from first click to closed deal.
               </p>
             </motion.div>
+
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -170,11 +173,13 @@ const Index = () => {
                 <Link to="/portfolio" className="w-full sm:w-auto">
                   <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                     <Button variant="heroOutline" size="xl" className="gap-2 w-full sm:w-auto text-sm sm:text-base px-5 sm:px-8">
-                      View Our Work
+                      Explore Our Work <ArrowRight size={20} />
                     </Button>
                   </motion.div>
                 </Link>
               </div>
+              <p className="mt-5 text-xs text-muted-foreground/80">Free 30-min strategy call · No obligation · Reply within 24 hours</p>
+
             </motion.div>
 
             <motion.div
@@ -303,7 +308,11 @@ const Index = () => {
             <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-5">
               Our Proven <span className="gradient-text">4-Step Website System</span>
             </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+              A clear, collaborative process — typically delivered in 3–4 weeks, with full transparency at every milestone.
+            </p>
           </AnimatedSection>
+
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {processSteps.map((item, index) => (
@@ -321,9 +330,11 @@ const Index = () => {
                   >
                     <item.icon size={28} />
                   </motion.div>
+                  <div className="text-[11px] font-semibold text-primary uppercase tracking-widest mb-2">{item.duration}</div>
                   <h3 className="text-lg font-display font-semibold text-foreground mb-3">{item.title}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
                 </motion.div>
+
               </AnimatedSection>
             ))}
           </div>
@@ -465,7 +476,9 @@ const Index = () => {
                     <div className="p-6">
                       <div className="text-xs font-semibold text-primary mb-2 uppercase tracking-wider">{project.category}</div>
                       <h3 className="text-lg font-display font-bold text-foreground group-hover:text-primary transition-colors">{project.title}</h3>
+                      <p className="text-muted-foreground text-sm mt-2 leading-relaxed">{project.outcome}</p>
                     </div>
+
                   </motion.div>
                 </a>
               </AnimatedSection>

@@ -30,13 +30,17 @@ const About = () => {
         <div className="absolute bottom-10 left-20 w-48 h-48 bg-primary/6 rounded-full blur-3xl animate-blob-delay" />
         <div className="container-custom relative z-10">
           <AnimatedSection className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-display font-bold text-foreground mb-6">
-              About <span className="gradient-text">BQ Solutions</span>
+            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-1.5 rounded-full text-xs font-semibold mb-6 tracking-wider uppercase">
+              About BQ Solutions
+            </div>
+            <h1 className="text-4xl md:text-6xl font-display font-bold text-foreground mb-6 leading-[1.05] tracking-tight">
+              A Premium Web Agency Built on <span className="gradient-text">Craft & Conversion</span>
             </h1>
             <p className="text-lg text-muted-foreground">
-              We build digital assets — not just websites. Every project is strategically designed to turn visitors into paying clients.
+              We don't build websites — we build digital assets. Every project is strategically designed, hand-crafted, and engineered to turn visitors into paying clients.
             </p>
           </AnimatedSection>
+
         </div>
       </section>
 
@@ -49,10 +53,11 @@ const About = () => {
                 We Build <span className="gradient-text">Digital Assets</span> — Not Just Websites
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
-                <p>At BQ Solutions, we don't offer average websites. We specialize in creating premium, conversion-driven websites that position your business as an authority in your industry.</p>
-                <p>Every website we build is strategically designed to turn visitors into paying clients. We focus on performance, design psychology, and user experience to ensure your website works 24/7 as your best salesperson.</p>
-                <p>We serve international businesses, startups, ecommerce brands, and service companies who are serious about their online presence.</p>
+                <p>BQ Solutions is a premium web design agency for ambitious businesses that take their online presence seriously. We exist because most websites quietly cost their owners customers — and we refuse to ship work that does that.</p>
+                <p>Every project is approached like a strategic asset: researched, designed, and engineered around a single goal — turning visitors into qualified leads and paying clients. We combine design psychology, conversion principles, and clean engineering to make sure your site doesn't just look premium, it performs.</p>
+                <p>We partner with exporters, e-commerce brands, service businesses, and personal brands across Pakistan and internationally — and we treat every launch as the start of a long-term partnership.</p>
               </div>
+
             </AnimatedSection>
             <AnimatedSection direction="right" className="order-1 lg:order-2">
               <div className="relative">
@@ -185,11 +190,19 @@ const About = () => {
                 <p className="text-primary-foreground/90 mb-10 max-w-xl mx-auto text-lg">
                   Let's build a website that positions your business as the authority in your industry.
                 </p>
-                <Link to="/contact">
-                  <Button variant="secondary" size="lg" className="gap-2 font-bold">
-                    Book Your Strategy Call <ArrowRight size={18} />
-                  </Button>
-                </Link>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link to="/contact">
+                    <Button variant="secondary" size="lg" className="gap-2 font-bold">
+                      Book Your Strategy Call <ArrowRight size={18} />
+                    </Button>
+                  </Link>
+                  <Link to="/portfolio">
+                    <Button variant="outline" size="lg" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground font-bold">
+                      Explore Our Work
+                    </Button>
+                  </Link>
+                </div>
+
               </div>
             </div>
           </AnimatedSection>

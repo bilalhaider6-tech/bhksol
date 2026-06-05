@@ -49,16 +49,20 @@ const Contact = () => {
         <div className="absolute top-20 right-10 w-64 h-64 bg-primary/8 rounded-full blur-3xl animate-blob" />
         <div className="container-custom relative z-10">
           <AnimatedSection className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-display font-bold text-foreground mb-6">
-              Book Your Free{" "}
-              <span className="gradient-text">Strategy Call</span>
+            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-1.5 rounded-full text-xs font-semibold mb-6 tracking-wider uppercase">
+              Free Strategy Call
+            </div>
+            <h1 className="text-4xl md:text-6xl font-display font-bold text-foreground mb-6 leading-[1.05] tracking-tight">
+              Let's Build a Website That{" "}
+              <span className="gradient-text">Works for You</span>
             </h1>
             <p className="text-lg text-muted-foreground">
-              Ready for a premium website that dominates your industry? Let's talk about your project.
+              Tell us about your business. We'll respond within 24 hours with clear next steps — no obligation, no pushy sales.
             </p>
           </AnimatedSection>
         </div>
       </section>
+
 
       {/* Contact Section */}
       <section className="section-padding">
@@ -90,9 +94,13 @@ const Contact = () => {
                   <Button type="submit" variant="default" size="lg" className="w-full gap-2 h-13" disabled={isSubmitting}>
                     {isSubmitting ? "Sending..." : (<>Book Strategy Call <Send size={18} /></>)}
                   </Button>
+                  <p className="text-xs text-muted-foreground text-center pt-1">
+                    🔒 Your details stay private. We reply within 24 hours — no spam, ever.
+                  </p>
                 </form>
               </div>
             </AnimatedSection>
+
 
             {/* Contact Info */}
             <AnimatedSection direction="right" className="order-1 lg:order-2">

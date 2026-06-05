@@ -17,11 +17,11 @@ import {
 } from "lucide-react";
 
 const websiteTypes = [
-  { icon: Building, title: "Corporate Websites", description: "Professional websites that establish credibility and authority for your business." },
-  { icon: Globe, title: "Export Company Websites", description: "International-standard websites built for global trade and export businesses." },
-  { icon: ShoppingCart, title: "Ecommerce Websites", description: "High-converting online stores with seamless shopping experience and secure payments." },
-  { icon: User, title: "Personal Brand Websites", description: "Websites that position you as the go-to expert in your industry." },
-  { icon: Zap, title: "High-Converting Landing Pages", description: "Laser-focused pages designed to capture leads and drive specific actions." },
+  { icon: Building, title: "Corporate Websites", description: "Authority-driven sites that instantly establish credibility, attract enterprise clients, and turn your business into the obvious choice." },
+  { icon: Globe, title: "Export Company Websites", description: "International-standard websites that win trust from global buyers and open doors to high-value export opportunities." },
+  { icon: ShoppingCart, title: "Ecommerce Websites", description: "High-converting online stores engineered for repeat purchases, larger basket sizes, and a frictionless checkout experience." },
+  { icon: User, title: "Personal Brand Websites", description: "Premium personal sites that position you as the go-to expert and turn your audience into qualified opportunities." },
+  { icon: Zap, title: "High-Converting Landing Pages", description: "Laser-focused pages built around one goal — capturing leads or sales — with messaging tuned to your ideal client." },
 ];
 
 const includes = [
@@ -33,6 +33,7 @@ const includes = [
   "Professional UI/UX Layout",
 ];
 
+
 const Services = () => {
   return (
     <Layout>
@@ -42,13 +43,17 @@ const Services = () => {
         <div className="absolute bottom-10 left-20 w-48 h-48 bg-primary/6 rounded-full blur-3xl animate-blob-delay" />
         <div className="container-custom relative z-10">
           <AnimatedSection className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-display font-bold text-foreground mb-6">
-              Premium <span className="gradient-text">Website Development</span>
+            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-1.5 rounded-full text-xs font-semibold mb-6 tracking-wider uppercase">
+              Our Services
+            </div>
+            <h1 className="text-4xl md:text-6xl font-display font-bold text-foreground mb-6 leading-[1.05] tracking-tight">
+              Websites Engineered to <span className="gradient-text">Win Clients</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              We do one thing exceptionally well — build premium, conversion-focused websites that position your business as the obvious choice.
+              We do one thing exceptionally well — design and build premium, conversion-focused websites that turn your online presence into your best-performing salesperson.
             </p>
           </AnimatedSection>
+
         </div>
       </section>
 
