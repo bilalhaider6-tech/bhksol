@@ -173,11 +173,13 @@ const Index = () => {
                 <Link to="/portfolio" className="w-full sm:w-auto">
                   <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                     <Button variant="heroOutline" size="xl" className="gap-2 w-full sm:w-auto text-sm sm:text-base px-5 sm:px-8">
-                      View Our Work
+                      Explore Our Work <ArrowRight size={20} />
                     </Button>
                   </motion.div>
                 </Link>
               </div>
+              <p className="mt-5 text-xs text-muted-foreground/80">Free 30-min strategy call · No obligation · Reply within 24 hours</p>
+
             </motion.div>
 
             <motion.div
@@ -306,7 +308,11 @@ const Index = () => {
             <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-5">
               Our Proven <span className="gradient-text">4-Step Website System</span>
             </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+              A clear, collaborative process — typically delivered in 3–4 weeks, with full transparency at every milestone.
+            </p>
           </AnimatedSection>
+
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {processSteps.map((item, index) => (
@@ -324,9 +330,11 @@ const Index = () => {
                   >
                     <item.icon size={28} />
                   </motion.div>
+                  <div className="text-[11px] font-semibold text-primary uppercase tracking-widest mb-2">{item.duration}</div>
                   <h3 className="text-lg font-display font-semibold text-foreground mb-3">{item.title}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
                 </motion.div>
+
               </AnimatedSection>
             ))}
           </div>
@@ -468,7 +476,9 @@ const Index = () => {
                     <div className="p-6">
                       <div className="text-xs font-semibold text-primary mb-2 uppercase tracking-wider">{project.category}</div>
                       <h3 className="text-lg font-display font-bold text-foreground group-hover:text-primary transition-colors">{project.title}</h3>
+                      <p className="text-muted-foreground text-sm mt-2 leading-relaxed">{project.outcome}</p>
                     </div>
+
                   </motion.div>
                 </a>
               </AnimatedSection>
