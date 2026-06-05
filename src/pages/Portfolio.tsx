@@ -74,15 +74,19 @@ const Portfolio = () => {
         <div className="absolute top-20 right-10 w-64 h-64 bg-primary/8 rounded-full blur-3xl animate-blob" />
         <div className="container-custom relative z-10">
           <AnimatedSection className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-display font-bold text-foreground mb-6">
-              Our <span className="gradient-text">Portfolio</span>
+            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-1.5 rounded-full text-xs font-semibold mb-6 tracking-wider uppercase">
+              Selected Work
+            </div>
+            <h1 className="text-4xl md:text-6xl font-display font-bold text-foreground mb-6 leading-[1.05] tracking-tight">
+              Case Studies in <span className="gradient-text">Premium Web Design</span>
             </h1>
             <p className="text-lg text-muted-foreground">
-              Premium websites we've built for businesses ready to dominate their industry.
+              A curated selection of websites we've designed and built for ambitious brands across rice export, carpentry, plumbing, painting, and e-commerce.
             </p>
           </AnimatedSection>
         </div>
       </section>
+
 
       {/* Portfolio Grid */}
       <section className="section-padding">
